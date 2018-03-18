@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FundRaizerV2</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="">
+         <p class="notice"><%= notice %></p>
+         <p class="alert"><%= alert %></p>
+        <% if business_signed_in? %>
+          <%=  render "shared/bus_navbar" %>
+        <% elsif org_signed_in? %>
+          <%=  render "shared/org_navbar" %>
+        <% else %>
+          <%=  render "shared/navbar" %>
+        <% end %>
+
+      <%= yield %>
+
+      <%= render "shared/footer" %>
+    </div>
+
+  </body>
+</html>
