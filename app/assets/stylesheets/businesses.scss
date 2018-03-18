@@ -1,0 +1,46 @@
+@import "bootstrap";
+
+body{
+  color: #495057;
+  background-color: #f8f9fa;
+}
+
+.headerpic{
+
+  /*image-url("photo-room-table");*/
+  background-size: cover;
+  height: 325px;
+  background-image: url("photo-room-table.jpg");
+}
+
+.w-100 {
+    width: 100% !important;
+
+}
+
+.logopic{
+  width:8em;
+  height: 7em;
+  margin-top: -4rem;
+  background-color: pink;
+  margin-left: 5em;
+}
+
+.mar-b{
+  margin-bottom: 1em;
+}
+
+
+.card-borderless {
+    border: none;
+  }
+
+
+.add-card {
+    background: #e9ecef !important;
+    color: #495057;
+}
+
+.add-card a:hover {
+  text-decoration: none;
+}
