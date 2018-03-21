@@ -1,2 +1,39 @@
-<h1>Businesses#index</h1>
-<p>Find me in app/views/businesses/index.html.erb</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+
+        <div class="col-md-7 dir-search dir-search-list">
+              <div class="row">
+                    <div class="col-md-10">
+                    <% @businesses.each do |f| %>
+                          <div class="listing space30">
+                              <div class="listing-info row">
+                                    <div class="col-md-4">
+                                        <div class="">
+                                            <%= image_tag portfolio_img(f), width: '100%' %>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h4 class="li-name"><%= link_to f.name, business_path(f) %>  </h4>
+                                        <p class="li-category">Caffe,restaurant</p>
+                                        <p class="li-location"> <%= f.address_1 %> </p>
+                                        <p> <%#= link_to "Book", new_org_event_path(current_org.id) , class:'btn btn-primary' %></p>
+                                        <% if current_business and current_business.id == f.id %>
+                                                <p> <%= link_to "edit", edit_business_registration_path %></p>
+                                        <% end %>
+                                    </div>
+                              </div>
+                          </div>
+                      <% end %>
+                   </div>
+              </div>
+            <div><%#= will_paginate @businesses, renderer: BootstrapPagination::Rails  %></div>
+        </div>
+
+
+    </div>
+
+
+</div>
