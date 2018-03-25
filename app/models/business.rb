@@ -7,6 +7,6 @@ class Business < ApplicationRecord
 
 
 
-  mount_uploader :business_image_uploader, BusinessImageUploader
+  mount_uploader :business_image, BusinessImageUploader
 
 end

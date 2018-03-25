@@ -5,9 +5,9 @@ module BusinessesHelper
 
   def portfolio_img f
     if f.business_image?
-      img
+      f.business_image
     else
-      image_generator(height: '350', width: '200')
+      image_generator(height: '200', width: '150')
     end
   end
 end
