@@ -16,12 +16,30 @@
 @import "bootstrap";
 
 
-.nav-bg-color{
+/*.nav-bg-color{
   border-color: #e7e7e7;
   background-color: #f8f8f8;
-}
+}*/
 
 body{
   background: #f8f9fb;
 
+}
+
+
+.space30 {
+    margin-bottom: 30px;
+}
+
+
+.side-cat2 {
+    padding: 27px;
+}
+
+
+.navbar-def {
+    background-color: #f8f8f8;
+    /*border:5px solid #000;*/
+    border-bottom: 1px solid  #e7e7e7;
+    /*border-color: #e7e7e7;*/
 }
