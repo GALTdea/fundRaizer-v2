@@ -1,7 +1,8 @@
 class BusinessesController < ApplicationController
   def index
-    @businesses = Business.all
+    @businesses = Business.paginate(:page => params[:page], per_page: 1)
   end
+
 
   # def show
   #   @business = Business.find((params[:id])
