@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+.sign-up-stile{
+    font-family: 'Rubik', sans-serif;
+}
 
 .un-link a:hover {
   text-decoration: none;
@@ -17,6 +20,11 @@
   background-image: url("photo-room-table.jpg");
 }
 
+.sign-up-sty{
+    background-color: #e9ecef !important;
+    padding: 1.25rem;
+
+}
 
 /******************************************************Index page side Search widget***************************************************/
 .side-widget {
