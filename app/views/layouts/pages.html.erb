@@ -12,10 +12,7 @@
   </head>
 
   <body>
-
-
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+        <%= alerts %>
 
          <% if business_signed_in? %>
           <%=  render "shared/bus_navbar" %>
@@ -28,6 +25,7 @@
 
 
       <%= yield %>
+
 
       <%= render "shared/footer" %>
   </body>

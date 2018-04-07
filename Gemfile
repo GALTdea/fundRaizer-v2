@@ -48,6 +48,7 @@ gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
+gem 'gritter', '~> 1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
