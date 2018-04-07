@@ -15,8 +15,7 @@
   <body>
 
     <div class="">
-         <p class="notice"><%= notice %></p>
-         <p class="alert"><%= alert %></p>
+         <%= alerts %>
         <% if business_signed_in? %>
           <%=  render "shared/bus_navbar" %>
         <% elsif org_signed_in? %>
@@ -25,7 +24,9 @@
           <%=  render "shared/navbar" %>
         <% end %>
 
+
       <%= yield %>
+
 
       <%= render "shared/footer" %>
     </div>

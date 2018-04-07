@@ -1,4 +1,6 @@
+
 @import "bootstrap";
+@import 'gritter';
 
 .sign-up-stile{
     font-family: 'Rubik', sans-serif;
@@ -25,6 +27,42 @@
     padding: 1.25rem;
 
 }
+
+
+/*.label-login {
+    margin-bottom: .1rem;
+}*/
+
+
+/*..................... Business Registering ...............     */
+
+.bus_edit_page label {
+    margin-bottom: .1rem;
+    font-weight: normal !important;
+    color: red;
+
+}
+
+.bus_edit_page input {
+    color: grey;
+    font-weight: 10;
+    border: 1px solid #ced4da;
+}
+
+.bus_edit_page  {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 0;
+    color: #495057;
+}
+
+.bus_edit_page  p {
+
+    font-weight: 0;
+    color: #495057;
+}
+
+
+
 
 /******************************************************Index page side Search widget***************************************************/
 .side-widget {
