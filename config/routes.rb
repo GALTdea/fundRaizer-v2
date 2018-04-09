@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  # get 'events/index'
+
+  # get 'events/show'
+
+  # get 'events/edit'
+
+  resources :events
+
   get 'orgs/index'
 
   get 'orgs/show'
@@ -18,6 +26,12 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/home'
+
+
+  resources :businesses do
+    resources :events
+  end
+
 
   # get 'businesses/index'
 

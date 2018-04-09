@@ -9,4 +9,8 @@ class Business < ApplicationRecord
 
   mount_uploader :business_image, BusinessImageUploader
 
+
+  has_many :events, dependent: :destroy
+  has_many :orgs, through: :events
+
 end

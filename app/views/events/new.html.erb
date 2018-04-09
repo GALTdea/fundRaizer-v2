@@ -1,0 +1,9 @@
+<h1>Set new Event</h1>
+
+
+<%= form_for [ @business, @event] do |f| %>
+  <%= f.text_field :name %>
+  <%= f.button :submit %>
+
+
+<% end %>
