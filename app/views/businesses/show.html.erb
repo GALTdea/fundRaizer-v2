@@ -72,6 +72,24 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="card card-borderless">
+                        <p class="lead">Would like to discuss by the phone?</p>
+                        <p>Call our represntative</p> <a href="#">0080 1200 222 333</a>
+                        <% if current_business != @business  %>
+                            <div class="dp-contact">
+                                <h5>Request Event!</h5>
+                                <p>we usually respond within 3 hours</p>
+                                <%= form_for [ @business, @event] do |f| %>
+                                    <%= f.text_field :name, placeholder: "What kind of event!" %>
+                                    <%#= f.text_field :number_of_guess, placeholder: "Minimum Number of Guess" %>
+                                    <%= f.button :submit %>
+                                <% end %>
+                            </div>
+                        <% end %>
+                    </div>
+                    <br>
+
                     <div class="card card-borderless add-card mar-b ">
                         <a class="card-body" href="#">
                             <div class="d-flex justify-content-between mb-3">
