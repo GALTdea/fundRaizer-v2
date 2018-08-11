@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :orgs
+    resources :businesses
+    resources :events
+
+    root to: "orgs#index"
+  end
+
   # get 'events/index'
 
   # get 'events/show'
