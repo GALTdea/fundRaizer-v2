@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top  navbar-def">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="/">FundRaisable</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,14 +20,14 @@
         </ul>
         <!-- LInks linig to the right  -->
         <ul class="navbar-nav ml-auto" >
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown fas fa-user">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Business
+            
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'logout ', destroy_business_session_path, method: :delete, class: 'dropdown-item' %>
               <%= link_to 'edit ', edit_business_registration_path, class: 'dropdown-item' %>
-              <%= link_to "All Events", business_events_path(current_business) %>
+              <%= link_to "All Events", business_events_path(current_business), class: 'dropdown-item' %>
             </div>
           </li>
         </ul>
