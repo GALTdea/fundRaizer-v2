@@ -40,6 +40,13 @@ Rails.application.routes.draw do
     resources :events
   end
 
+  resources :events do
+    member do
+      patch :confirmation
+      put :confirmation
+    end
+  end
+
 
   # get 'businesses/index'
 

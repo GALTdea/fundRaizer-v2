@@ -1,2 +1,14 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class="container">
+<h1>Event:</h1>
+Event Name: <%= @event.name %>
+<br>
+Bus Id: <%= @event.business_id %>
+<br>
+Org Id: <%= @event.org_id %>
+<br>
+Active: <%= @event.active %>
+<br>
+<%= link_to "Event Page", event_page_path(@event) %>
+<br>
+
+</div>
