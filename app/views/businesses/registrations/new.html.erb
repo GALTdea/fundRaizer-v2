@@ -16,7 +16,13 @@
 
           <div class="field form-row form-group">
             <div class="col">
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg", placeholder:"Company Name" %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg", placeholder:"Email" %>
+            </div>
+          </div>
+
+          <div class="field form-row form-group">
+            <div class="col">
+              <%= f.text_field :name, autofocus: false, autocomplete: "name", class:"form-control form-control-lg", placeholder:"Business Name" %>
             </div>
           </div>
 

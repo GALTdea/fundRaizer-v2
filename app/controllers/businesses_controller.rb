@@ -5,7 +5,7 @@ class BusinessesController < ApplicationController
 
 
   def show
-    @business = Business.find(params[:id])
+    @business = Business.friendly.find(params[:id])
     @events = @business.events
     @event = Event.new
   end
