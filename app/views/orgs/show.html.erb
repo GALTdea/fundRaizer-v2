@@ -1,2 +1,33 @@
-<h1>Orgs#show</h1>
-<p>Find me in app/views/orgs/show.html.erb</p>
+<br>
+<br>
+<br>
+<br>
+<%= link_to "Update Org", edit_org_registration_path %> <br><br>
+<%= @org.name %> <br>
+<%= @org.manager %> <br><br>
+
+<h3> Events</h3>
+<% @events.each do |f| %>
+	<%= link_to f.name, event_path(f) %> || <%#= link_to "page", event_page_path(f.event_page) %> <br>
+	<% if business_signed_in? %>
+		||
+			<% if f.active == false %>
+				<%= link_to "Accept Event", confirmation_event_path( f , event: { active: true } ), method: :put %>
+			<% else %>
+			  <%= link_to "Cancell Event", confirmation_event_path( f , event: { active: false } ), method: :put %>
+			<%end %>
+	<% end %>
+<% end %>
+
+
+<h3> Event Pages</h3>
+
+<%# @event_pages.each do |f| %>
+ <%#= link_to f.event_name, event_page_path(f) %> || <%#= link_to "edit", edit_event_page_path(f) %> <br>
+<%# end %>
+
+
+
+<%#= link_to "Delete", room_path(room, room: {name: nil, address: nil}) , method: :put, data: { confirm: "You sure?"} %>
+
+<!--  -->

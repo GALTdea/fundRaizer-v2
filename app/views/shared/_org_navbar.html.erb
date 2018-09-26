@@ -22,13 +22,10 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Login
               </a>
-              <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <%#= link_to "Sign Out", destroy_org_session_path, method: :delete, class: 'dropdown-item'  %>
-              </div> -->
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <%= link_to "Edit Profile", edit_org_registration_path, class: 'dropdown-item'  %>
+                <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: 'dropdown-item'  %>
               </div>
 
             </li>
@@ -36,3 +33,6 @@
         </div>
       </nav>
     </header>
+
+
+    
