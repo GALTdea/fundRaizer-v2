@@ -8,8 +8,7 @@
         <h1 class="h2 mb-2">Sign up Orgs</h1>
         <span></span>
       </div>
-
-
+      
     <div class="row justify-content-center ">
       <div class="col-md-12 col-lg-9">
 
@@ -19,6 +18,12 @@
         <div class="field form-row form-group ">
           <div class="col">
             <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control form-control-lg", placeholder:"Email"  %>
+          </div>
+        </div>
+
+        <div class="field form-row form-group ">
+          <div class="col">
+            <%= f.text_field :manager, autocomplete: "manager",class:"form-control form-control-lg", placeholder:"Name"  %>
           </div>
         </div>
 
@@ -52,8 +57,6 @@
 
         <% end %>
         <%= render "orgs/shared/links" %>
-
-
       </div>
     </div>
   </div>

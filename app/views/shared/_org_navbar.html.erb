@@ -1,38 +1,37 @@
-  <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="/">FundRaisable</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
-              <%= link_to "Profile", org_path(current_org), class: 'nav-link' %>
-            </li>
-            <li class="nav-item">
-              <%#= link_to "Profile", org_path(current_org), class:"nav-link" %>
+<div class="container">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top  navbar-def">
+      <a class="navbar-brand" href="/">FundRaisable B</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <!-- <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> -->
+            <%= link_to "Home", pages_welcome_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Profile", org_path(current_org), class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%#= link_to "All Businesses", businesses_path, class: 'nav-link' %>
+          </li>
 
-            </li>
-            <li class="nav-item">
-              <!-- <a class="nav-link" href="#">Pricing</a> -->
-              <%#= link_to "Activity", ro %>
-              <%= link_to "All Businesses", businesses_path, class:"nav-link" %>
-              
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <%= link_to "Edit Profile", edit_org_registration_path, class: 'dropdown-item'  %>
-                <%= link_to "Sign Out", destroy_org_session_path, method: :delete, class: 'dropdown-item'  %>
-              </div>
-
-            </li>
-          </ul>
+        </ul>
+        <!-- LInks linig to the right  -->
+        <ul class="navbar-nav ml-auto busNab" >
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <%= link_to 'logout ', destroy_org_session_path, method: :delete, class: 'dropdown-item' %>
+              <%= link_to 'edit ', edit_org_registration_path, class: 'dropdown-item' %>
+              <%#= link_to "All Events", org_events_path(current_org), class: 'dropdown-item' %>
+            </div>
+          </li>
+        </ul>
         </div>
-      </nav>
-    </header>
-
-
-    
+      </div>
+    </nav>
+  </header>
+</div>

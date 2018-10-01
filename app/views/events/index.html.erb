@@ -3,14 +3,15 @@
 <br>
 <br>
 <div class="container">
-  <div>
-    <br>
-    <br>
+  
     <% @events.each do |f| %>
+    <div class="row eventCard">
       <%= link_to f.name, event_path(f) %> || <%= event_confirmation_helper (f) %> <br>
       <%#= confirmation_message f %>
       <br>
       <br>
+    </div>
+    <br>
     <% end %>
   </div>
 

@@ -22,12 +22,11 @@
         <!-- LInks linig to the right  -->
         <ul class="navbar-nav ml-auto busNab" >
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Account </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'logout ', destroy_business_session_path, method: :delete, class: 'dropdown-item' %>
               <%= link_to 'edit ', edit_business_registration_path, class: 'dropdown-item' %>
-              <%#= link_to "All Events", business_events_path(current_business), class: 'dropdown-item' %>
+              <%= link_to "All Events", business_events_path(current_business), class: 'dropdown-item' %>
               
             </div>
           </li>
@@ -36,6 +35,4 @@
       </div>
     </nav>
   </header>
-
-
 </div>
