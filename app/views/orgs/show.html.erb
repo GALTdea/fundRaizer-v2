@@ -8,19 +8,25 @@
 
 <h3> Events</h3>
 <% @events.each do |f| %>
-	<%= link_to f.name, event_path(f) %> || <%#= link_to "page", event_page_path(f.event_page) %> <br>
-	<% if business_signed_in? %>
-		||
-			<% if f.active == false %>
-				<%= link_to "Accept Event", confirmation_event_path( f , event: { active: true } ), method: :put %>
-			<% else %>
-			  <%= link_to "Cancell Event", confirmation_event_path( f , event: { active: false } ), method: :put %>
-			<%end %>
-	<% end %>
+	<div class="container">
+		<div class="row eventCard">
+			<%= link_to f.name, event_path(f) %> || <%#= link_to "page", event_page_path(f.event_page) %> <br>
+			<% if business_signed_in? %>
+				||
+					<% if f.active == false %>
+						<%= link_to "Accept Event", confirmation_event_path( f , event: { active: true } ), method: :put %>
+					<% else %>
+					  <%= link_to "Cancell Event", confirmation_event_path( f , event: { active: false } ), method: :put %>
+					<%end %>
+			<% end %>
+		</div>
+	</div>
 <% end %>
 
 
 <h3> Event Pages</h3>
+
+</div>
 
 <%# @event_pages.each do |f| %>
  <%#= link_to f.event_name, event_page_path(f) %> || <%#= link_to "edit", edit_event_page_path(f) %> <br>

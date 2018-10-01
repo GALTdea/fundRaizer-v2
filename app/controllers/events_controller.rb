@@ -12,7 +12,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @business = Business.find(params[:business_id])
+    @business = Business.friendly.find(params[:business_id])
      # @event = current_org.events.build(event_params)
     @event = Event.create(event_params)
     @event.business_id = @business.id

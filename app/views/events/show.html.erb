@@ -6,9 +6,16 @@ Bus Id: <%= @event.business_id %>
 <br>
 Org Id: <%= @event.org_id %>
 <br>
-Active: <%= @event.active %>
+Active: <%#= @event.active %>
+	<%# if @event.busiess_active and @event.org_active %>
+	<%#= return <p>True</p>%>
+		
+	<%# else %>
+		<!-- <p> false</p> -->
+	<%# end %>
+	
 <br>
-<%= link_to "Event Page", event_page_path(@event) %>
+<%#= link_to "Event Page", event_page_path(@event) %>
 <br>
 
 </div>
