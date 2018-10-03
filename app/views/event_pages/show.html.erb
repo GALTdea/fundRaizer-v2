@@ -1,0 +1,136 @@
+
+<% if current_org %>
+    <%= link_to "Edit Event Page", event_pages_edit_path(@page) %>
+    <%#= social_share_button_tag(@page.event_name) %>
+<% end %>
+<div class="evetPageHeader">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <div class="eventHeader"><%= @page.event_name %></h3>
+            <div class="when"> When: <%= @page.date_start.strftime("%F") %>
+            <h3><%= @page.address %></h3>
+            <h4><%= @page.about %></h4>
+
+            <div class="row">
+
+                <div class="col-md-12">
+                     <%#= image_tag event_page_img(@page.main_image, 'main'), class: 'main_image' %>
+                </div>
+
+            </div>
+
+
+            <form class="pricing-form">
+                <input type="checkbox" value="8" class="cbox" name="product" id="r-cbox3" onclick="totalIt()" checked/>
+                <label for="r-cbox3"><span><b>$8</b></span> Package Deal 1</label>
+                <br/>
+                <input type="checkbox" value="4" class="cbox" name="product" id="r-cbox4" onclick="totalIt()" checked/>
+                <label for="r-cbox4"><span><b>$4</b></span> Package Deal 2</label>
+                <br/>
+                <input type="checkbox" value="4" class="cbox" name="product" id="r-cbox5" onclick="totalIt()" />
+                <label for="r-cbox5"><span><b>$4</b></span> Package Deal 3</label>
+                <br/>
+                <p>total:</p>
+                <div class="total-price">$<span><input value="12" readonly="readonly" type="text" id="total"/></span> </div>
+                <button type="submit">Choose </button>
+                <p class="small-text">.....</p>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- placed youtube vid -->
+
+			<div >
+				<div class="embed-responsive embed-responsive-16by9">
+  				<iframe width="560" height="315" src="https://www.youtube.com/embed/v-4NxDImuqk" frameborder="0" allowfullscreen></iframe>
+				</div>
+
+			</div>
+
+
+        <div class="faq">
+            <div class="container">
+                <h3>FAQ page</h3>
+                <div class="col-md-8 col-md-offset-2 no-padding">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <p class="larger-text">Donec ac elit ac tortor pretium</p>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor orci eget vehicula mattis.</p>
+                            <p class="larger-text">Donec ac elit ac tortor pretium</p>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor orci eget vehicula mattis.</p>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <p class="larger-text">Donec ac elit ac tortor pretium</p>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor orci eget vehicula mattis.</p>
+                            <p class="larger-text">Donec ac elit ac tortor pretium</p>
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porttitor orci eget vehicula mattis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cta-wrap">
+
+            <div class="container">
+                <div class="row center-content">
+                    <div class="col-md-8 col-sm-7">
+                        <p>Get the Carwhash package and Support us:</p>
+                    </div>
+                    <div class="col-md-4 col-sm-5 text-right"> <a href="#" class="cta-btn">Buy! </a> </div>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-3 footer-widget">
+                        <h5>About Us</h5>
+                        <p> <a href="#">Questions? 080-123-4564</a>
+                            <br> <a href="#">Our History</a>
+                    </div>
+                    <div class="col-md-3 col-sm-3 footer-widget">
+                        <h5>How it works</h5>
+                        <p> <a href="#">What we do</a>
+                            <br> <a href="#">Who we are</a>
+                            <br> <a href="#">Join the team</a>
+                            <br> <a href="#">Press</a>
+                            <br> <a href="#">Contact Us</a>
+
+                    </div>
+                    <div class="col-md-3 col-sm-3 footer-widget">
+
+                    </div>
+                    <div class="col-md-3 col-sm-3 footer-widget last">
+                        <ul class="payment-methods">
+                            <li> <img src="" class="img-responsive" alt="" /> </li>
+                            <li> <img src="" class="img-responsive" alt="" /> </li>
+                            <li> <img src="" class="img-responsive" alt="" /> </li>
+                        </ul>
+                        <p>Stay in the loop on all upcoming events</p>
+                        <form class="f-newsletter">
+                            <input type="email" placeholder="E-mail address"> </form>
+                        <p class="copy">&copy; 2016 Loocal. All rights reserved 2015.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-social">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-2 col-xs-2"> <a href="#"><span class="hidden-xs hidden-sm ">Contact</span><span class="visible-xs visible-sm hidden-md hidden-lg"><i class="fa fa-envelope-o"></i></span></a> </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"> <a href="#"><span class="hidden-xs hidden-sm ">Facebook</span><span class="visible-xs visible-sm hidden-md hidden-lg"><i class="fa fa-facebook"></i></span></a> </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"> <a href="#"><span class="hidden-xs hidden-sm ">Twitter</span><span class="visible-xs visible-sm hidden-md hidden-lg"><i class="fa fa-twitter"></i></span></a> </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"> <a href="#"><span class="hidden-xs hidden-sm ">Google+</span><span class="visible-xs visible-sm hidden-md hidden-lg"><i class="fa fa-google-plus"></i></span></a> </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"> <a href="#"><span class="hidden-xs hidden-sm ">Pinterest</span><span class="visible-xs visible-sm hidden-md hidden-lg"><i class="fa fa-pinterest"></i></span></a> </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2"> <a href="#"><span class="hidden-xs hidden-sm ">Linkedin</span><span class="visible-xs visible-sm hidden-md hidden-lg"><i class="fa fa-linkedin"></i></span></a> </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+
+
+

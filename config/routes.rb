@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'event_pages/index'
+
+  get 'event_pages/show'
+
+  get 'event_pages/edit'
+
+  get 'event_pages/update'
+
   namespace :admin do
     resources :orgs
     resources :businesses
@@ -40,6 +48,10 @@ Rails.application.routes.draw do
     resources :events
   end
 
+  resources :orgs do
+    resources :events
+  end
+
   resources :events do
     member do
       patch :confirmation
@@ -47,6 +59,7 @@ Rails.application.routes.draw do
     end
   end
 
+resources :event_pages
 
   # get 'businesses/index'
 
