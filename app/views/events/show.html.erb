@@ -2,20 +2,32 @@
 <h1>Event:</h1>
 Event Name: <%= @event.name %>
 <br>
-Bus Id: <%= @event.business_id %>
+Bus Name: <%= @event.business.name %>
 <br>
-Org Id: <%= @event.org_id %>
+Org Name: <%= @event.org.name %>
 <br>
-Active: <%#= @event.active %>
-	<%# if @event.busiess_active and @event.org_active %>
-	<%#= return <p>True</p>%>
-		
-	<%# else %>
-		<!-- <p> false</p> -->
-	<%# end %>
+
+	<% if @event.business_active == false  %>
+		<p>Active: Inactive</p>
+	<% else %>
+		<p>Active: True </p>
+	<% end %>
 	
 <br>
 <%#= link_to "Event Page", event_page_path(@event) %>
 <br>
 
 </div>
+
+
+
+<%#= link_to f.name, event_path(f) %>  <%#= link_to "page", event_page_path(f.event_page) %> <br>
+<% if business_signed_in? %>
+		<% if @event.business_active == false %>
+			<p>Event not active: <%= link_to "Accept Event", confirmation_event_path(@event ,event: { business_active: true } ), method: :put %></p>
+			
+		<% else %>
+		<p>Event Active: <%= link_to "Cancell Event", confirmation_event_path(@event, event: { active: false } ), method: :put %></p>
+		  
+		<%end %>
+<% end %>

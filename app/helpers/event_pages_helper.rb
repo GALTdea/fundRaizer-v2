@@ -2,13 +2,13 @@ module EventPagesHelper
 
 	def event_confirmation_helper f
 	    if f.business_active == false and current_business
-	      return (link_to "Accept Event", confirmation_event_path( f , event: { business_active: true } ), method: :put)
+	      return (link_to "Accept Event", confirmation_event_path( f , event: { business_active: true } ), method: :put, data: { confirm: 'Are you sure?' })
 	    elsif f.business_active == true and current_business
-	      return (link_to "Cancell Event", confirmation_event_path( f , event: { business_active: false } ), method: :put)
+	      return (link_to "Cancell Event", confirmation_event_path( f , event: { business_active: false } ), method: :put, data: { confirm: 'Are you sure?' })
 	    elsif f.org_active == true and current_org
-	      return (link_to "Cancell Event", confirmation_event_path( f , event: { org_active: false } ), method: :put)
+	      return (link_to "Cancell Event", confirmation_event_path( f , event: { org_active: false } ), method: :put, data: { confirm: 'Are you sure?' })
 	    elsif f.org_active == false and current_org
-	      return (link_to "Reactivate Event", confirmation_event_path( f , event: { org_active: true } ), method: :put)
+	      return (link_to "Reactivate Event", confirmation_event_path( f , event: { org_active: true } ), method: :put, data: { confirm: 'Are you sure?' })
 	    end
 	end
 
