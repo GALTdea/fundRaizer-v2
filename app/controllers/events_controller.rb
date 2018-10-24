@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     if current_business
       @events = Business.friendly.find(params[:business_id]).events
     elsif current_org
-       @events = Business.friendly.find(params[:org_id]).events
+       @events = Org.friendly.find(params[:org_id]).events
      end
   end
 
@@ -48,6 +48,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @org = @event.org
     if @event.update_attributes(event_params)
+      # place a conditional statment, if @org has event_page, don't create a new event_page
         EventPage.create(event_id: @event.id,
                          org_id: @org.id,
                          event_name: 'Name of the event',
@@ -60,7 +61,7 @@ class EventsController < ApplicationController
         if current_business
          redirect_to business_events_path(current_business)
         else
-          redirect_to org_events_path(current_org)
+          redirect_to org_path(current_org)
         end
     end
   end
