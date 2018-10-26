@@ -15,7 +15,7 @@
     <div class="container">
         <%= alerts %>
 
-         <% if business_signed_in? %>
+        <% if business_signed_in? %>
           <%=  render "shared/bus_navbar" %>
         <% elsif org_signed_in? %>
           <%=  render "shared/org_navbar" %>
