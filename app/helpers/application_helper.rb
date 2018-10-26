@@ -14,4 +14,7 @@ end
     js add_gritter(msg, title:  "FundRaisable App", sticky: false)
   end
 
+
+
+  
 end
