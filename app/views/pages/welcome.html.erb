@@ -1,6 +1,13 @@
 <br>
-<br>
-<br>
+<!-- <br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none">
+<br class="d-none .d-sm-block .d-md-none"> -->
+<!-- Carousel -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -9,20 +16,24 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="first-slide" src="http://via.placeholder.com/1300x350" alt="First slide">
+      <!-- <img class="first-slide" src="http://via.placeholder.com/1300x490" alt="First slide"> -->
+
+      <img class="first-slide-pic img-fluid" src="pages/emptyTable3Lights1300.jpg" alt="First slide">
+
       <div class="container">
-        <div class="carousel-caption text-left">
-          <h1>Is your group looking to fundraise?</h1>
-          <p>Hundreds of businesse in you're area willng to sponsore your funraiser.</p>
+        <div class="carousel-caption text-left outline">
+          <h1 class="" >Is your group looking to fundraise?</h1>
+          <p>Hundreds of businesse in your area willng to sponsore your funraiser.</p>
           <p><%= link_to "Sing up today", new_org_registration_path, class:"btn btn-lg btn-primary" %> </p>
         </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img class="second-slide" src="http://via.placeholder.com/1300x350" alt="Second slide">
+    <div class="carousel-item outline">
+      <img class="second-slide-pic img-fluid" src="pages/emptyBarTavle1300.jpg" alt="Second slide">
+   
       <div class="container">
         <div class="carousel-caption">
-          <h1>Joing the hundreds of companies helping change the world.</h1>
+          <h1 class="outline">Joing the hundreds of companies helping change the world.</h1>
           <p>Sign up will let organizatiosn in your area contact you about fundraiser events.</p>
           <p><%= link_to "Sing up today", new_business_registration_path, class:"btn btn-lg btn-primary" %></p>
         </div>
@@ -48,7 +59,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<main role="main">
+<!-- end carousel -->
+<main role="main" class="welcome-msg">
   <section class="jumbotron text-center welcome-jumbotron">
     <div class="container">
       <h1 class="jumbotron-heading">Like Groupon but for fundraising</h1>
@@ -58,82 +70,85 @@
 </main>
 
 <!-- Product story  -->
-<div class="container marketing d-flex justify-content-center" style=" text-align: center;">
-  <!-- Three columns of text below the carousel -->
-  <div class="row" >
-    <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px">
-      
-      <h3>Search</h3>
-      <p>Search through hundreds of potential sponsors in your area and find the best sponsor for your fundraiser needs. Partner up with sponsor that will better meet your organizational needs, better revenue share, accommodations, or availability.</p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px">
-      <!-- <div class="rounded-circle" style="background-color: black; width: 140px; height: 140px;"></div> -->
-      <h3>Campaign</h3>
-      <p>Update your campaign/event/deal page to include all the info needed and email, tweet, FaceBook or text it to all your supporter, asked them to reshare.</p>
-    </div><!-- /.col-lg-4 -->
-    <div class="col-lg-4">
-      <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px">
-      <!-- <div class="rounded-circle" style="background-color: black; width: 140px; height: 140px;"></div> -->
-      <h3>Sponsorless Events</h3>
-      <p>You don’t need a sponsor to fundraise. You can also organize your own events:  car washes,  rafles, concerts, dinners, dances etc. Our platform will help your reach your supporters via email, text, or social; make pre sales, ticketing service, and scheduling.</p>
-    </div><!-- /.col-lg-4 -->
-  </div><!-- /.row -->      
-</div>
+<main class="albumMain">
+  <div class="container marketing d-flex justify-content-center" style=" text-align: center;">
+    <!-- Three columns of text below the carousel -->
+    <div class="row" >
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px">
+        
+        <h3>Search</h3>
+        <p>Search through hundreds of potential sponsors in your area and find the best sponsor for your fundraiser needs. Partner up with sponsor that will better meet your organizational needs, better revenue share, accommodations, or availability.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px">
+        <!-- <div class="rounded-circle" style="background-color: black; width: 140px; height: 140px;"></div> -->
+        <h3>Campaign</h3>
+        <p>Update your campaign/event/deal page to include all the info needed and email, tweet, FaceBook or text it to all your supporter, asked them to reshare.</p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px">
+        <!-- <div class="rounded-circle" style="background-color: black; width: 140px; height: 140px;"></div> -->
+        <h3>Sponsorless Events</h3>
+        <p>You don’t need a sponsor to fundraise. You can also organize your own events:  car washes,  rafles, concerts, dinners, dances etc. Our platform will help your reach your supporters via email, text, or social; make pre sales, ticketing service, and scheduling.</p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->      
+  </div>
+</main>
 <!-- End Product story  -->
 
 
 <!-- Feature businesses  -->
-<div class="album py-5 bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="http://via.placeholder.com/350x225" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+<main class="feat-bus album">
+  <div class="py-5 ">
+    <div class="container" >
+      <div class="row" >
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" src="http://via.placeholder.com/350x225" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="http://via.placeholder.com/350x225" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" src="http://via.placeholder.com/350x225" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-4 box-shadow">
-          <img class="card-img-top" src="http://via.placeholder.com/350x225" alt="Card image cap">
-          <div class="card-body">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top" src="http://via.placeholder.com/350x225" alt="Card image cap">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div> 
-
+  </div> 
+</main>
 <!-- end feature businesses -->
 
 
