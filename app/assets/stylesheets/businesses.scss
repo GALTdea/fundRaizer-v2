@@ -34,12 +34,12 @@
 }*/
 
 
-/*..................... Business Registering ...............     */
+/*..................... Business Registration...............     */
 
 .bus_edit_page label {
     margin-bottom: .1rem;
     font-weight: normal !important;
-    color: red;
+    color: gray;
 
 }
 
@@ -647,7 +647,18 @@ div {
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 10px;
+    color: black;
 }
+
+.li-name a { 
+    color: gray;
+ }
+
+.li-name a:hover { 
+    text-decoration: none;
+    color: black;
+ }
+
 
 
 .dir-search-list .li-category {
