@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+  # get 'proposals/Index'
+
+  # get 'proposals/Show'
+
+  # get 'proposals/Edit'
+
+  # get 'proposals/New'
+
+
+
+
   get 'event_pages/index'
 
   get 'event_pages/show'
@@ -7,6 +18,9 @@ Rails.application.routes.draw do
   get 'event_pages/edit'
 
   get 'event_pages/update'
+
+
+
 
   namespace :admin do
     resources :orgs
@@ -50,6 +64,7 @@ Rails.application.routes.draw do
 
   resources :orgs do
     resources :events
+    resources :proposals
   end
 
   resources :events do
@@ -60,6 +75,18 @@ Rails.application.routes.draw do
   end
 
 resources :event_pages
+
+
+
+resources :proposals do
+  resources :bids
+end
+
+
+
+
+
+
 
   # get 'businesses/index'
 

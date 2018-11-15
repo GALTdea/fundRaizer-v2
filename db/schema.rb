@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181001041911) do
+ActiveRecord::Schema.define(version: 20181108034434) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bids", force: :cascade do |t|
+    t.text "description"
+    t.integer "amount"
+    t.bigint "business_id"
+    t.bigint "proposal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["business_id"], name: "index_bids_on_business_id"
+    t.index ["proposal_id"], name: "index_bids_on_proposal_id"
+  end
 
   create_table "businesses", force: :cascade do |t|
     t.string "name"
@@ -114,9 +125,24 @@ ActiveRecord::Schema.define(version: 20181001041911) do
     t.index ["slug"], name: "index_orgs_on_slug", unique: true
   end
 
+  create_table "proposals", force: :cascade do |t|
+    t.string "description"
+    t.string "reach"
+    t.string "amount_goal"
+    t.string "location"
+    t.date "date"
+    t.bigint "org_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["org_id"], name: "index_proposals_on_org_id"
+  end
+
+  add_foreign_key "bids", "businesses"
+  add_foreign_key "bids", "proposals"
   add_foreign_key "event_pages", "businesses"
   add_foreign_key "event_pages", "events"
   add_foreign_key "event_pages", "orgs"
   add_foreign_key "events", "businesses"
   add_foreign_key "events", "orgs"
+  add_foreign_key "proposals", "orgs"
 end
