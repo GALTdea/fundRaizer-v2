@@ -8,6 +8,8 @@ class OrgsController < ApplicationController
   	@org = Org.friendly.find(params[:id])
   	@events = @org.events
   	# @event_pages = @org.events.event_page
+
+    @propsal = Proposal.new
   end
 
 
