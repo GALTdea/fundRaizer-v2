@@ -8,55 +8,56 @@
         <h1 class="h2 mb-2">Sign up Orgs</h1>
         <span></span>
       </div>
-      
-    <div class="row justify-content-center ">
-      <div class="col-md-12 col-lg-9">
+     
+      <div class="row justify-content-center ">
+        <div class="col-md-12 col-lg-9">
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
 
-        <div class="field form-row form-group ">
-          <div class="col">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control form-control-lg", placeholder:"Email"  %>
+          <div class="field form-row form-group ">
+            <div class="col">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control form-control-lg", placeholder:"Email"  %>
+            </div>
           </div>
-        </div>
 
-        <div class="field form-row form-group ">
-          <div class="col">
-            <%= f.text_field :manager, autocomplete: "manager",class:"form-control form-control-lg", placeholder:"Name"  %>
+          <div class="field form-row form-group ">
+            <div class="col">
+              <%= f.text_field :manager, autocomplete: "manager",class:"form-control form-control-lg", placeholder:"Name"  %>
+            </div>
           </div>
-        </div>
 
-        <div class="field form-row form-group">
-          <div class="col">
-            <% if @minimum_password_length %>
-            <small>(<%= @minimum_password_length %> characters minimum)</small>
-            <% end %>
-            <%= f.password_field :password, autocomplete: "off", placeholder:'Password', class:"form-control form-control-lg"  %>
+          <div class="field form-row form-group">
+            <div class="col">
+              <% if @minimum_password_length %>
+              <small>(<%= @minimum_password_length %> characters minimum)</small>
+              <% end %>
+              <%= f.password_field :password, autocomplete: "off", placeholder:'Password', class:"form-control form-control-lg"  %>
+            </div>
           </div>
-        </div>
 
 
-         <div class="field  form-row form-group">
-          <div class="col">
-            <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control form-control-lg", placeholder:'Password Confirmation' %>
+          <div class="field  form-row form-group">
+            <div class="col">
+              <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control form-control-lg", placeholder:'Password Confirmation' %>
+            </div>
           </div>
-        </div>
 
 
-        <div class="actions form-row form-group">
-          <div class="col">
-             <%= f.submit "Sign up", class: "btn btn-block btn-success btn-lg" %>
+          <div class="actions form-row form-group">
+            <div class="col">
+              <%= f.submit "Sign up", class: "btn btn-block btn-success btn-lg" %>
+            </div>
           </div>
-        </div>
 
-        <div class="text-center">
-          <span class="text-small text-muted">By clicking 'Create Account' you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a>&nbsp;and <a href="#">Security Policy</a>
-          </span>
-        </div>
+          <div class="text-center">
+            <span class="text-small text-muted">By clicking 'Create Account' you agree to our <a href="#">Terms</a>, <a href="#">Privacy Policy</a>&nbsp;and <a href="#">Security Policy</a>
+            </span>
+          </div>
 
-        <% end %>
-        <%= render "orgs/shared/links" %>
+          <% end %>
+          <%= render "orgs/shared/links" %>
+        </div>
       </div>
     </div>
   </div>
