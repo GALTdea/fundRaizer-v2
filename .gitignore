@@ -17,3 +17,9 @@
 /yarn-error.log
 
 .byebug_history
+
+
+
+# must ingnore secret file
+/config/secrets.yml
+.env
