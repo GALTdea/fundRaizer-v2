@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 
 #### Added Gems
 
+# used to set enviroment variables
+gem 'dotenv', '~> 2.5'
+
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.12', '>= 1.12.9'
