@@ -8,13 +8,28 @@
 }
 
 
+/* Welcome Header */
+
 .welcome-jumbotron{
-  margin-bottom: 15rem;
+  
 }
 
-.carousel{
-	
+.header-msg{
+	font-size: 56px
 }
+
+.header-msg2{
+	font-size: 20px;
+	line-height: 34px;
+}
+
+.welcome-header{
+	/*background-color: #f8fcfb;*/
+	background-image: linear-gradient(#f8fcfb, #e8f4f0);
+}
+
+
+
 
 .first-slide-pic{
 	width: auto;
@@ -67,13 +82,11 @@
 	color: gray;
 	padding-bottom: 7em;
 	padding-top: 7em;
-	background-color: rgb(247, 222, 212);
+	/*background-color: rgb(247, 222, 212);*/
 }
 
-.mktg-stories {
-  color: #5a5a5a;
-  
-}
+
+
 
 .story-row{
 	margin-top: rem;
@@ -85,7 +98,7 @@
 }
 
 .albumMain{
-	background-color: rgb(247, 222, 212);
+	background-color: #75beb7;
 	/*margin-bottom: 20rem;*/
 }
 

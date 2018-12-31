@@ -2,6 +2,21 @@
 @import "bootstrap";
 @import 'gritter';
 
+.font1{
+  font-family: 'Roboto', sans-serif;
+}
+
+.font2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 56px;
+}
+
+
+.font3{
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+}
+
 /*.nav-bg-color{
   border-color: #e7e7e7;
   background-color: #f8f8f8;
@@ -47,8 +62,8 @@ body{
 }
 
 /*navbar*/
-.navbar-def {
-    background-color: #f8f8f8;
+.navbar-1 {
+    background-color: #f7fbfa !important;
     /*border:5px solid #000;*/
     border-bottom: 1px solid  #e7e7e7;
     /*border-color: #e7e7e7;*/
