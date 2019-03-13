@@ -1,3 +1,5 @@
+gem 'dotenv-rails', groups: [:development, :test]
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -36,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 #### Added Gems
 
 # used to set enviroment variables
-gem 'dotenv-rails', groups: [:development, :test]
+
 
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
