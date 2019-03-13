@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 #### Added Gems
 
 # used to set enviroment variables
-gem 'dotenv', '~> 2.5'
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
@@ -46,7 +46,13 @@ gem 'tether-rails', '~> 1.4'
 
 gem 'devise', '~> 4.4', '>= 4.4.1'
 
+# image loader and rezisors
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'fog-aws', '~> 3.3'
+
+# gem 'rmagick', '~> 2.16'
+gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'

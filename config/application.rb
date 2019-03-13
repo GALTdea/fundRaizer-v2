@@ -10,8 +10,13 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require 'fog/aws'
+require 'dotenv-rails'
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
+
+
+# require 'fog/aws'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -26,7 +31,7 @@ module FundRaizerV2
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
