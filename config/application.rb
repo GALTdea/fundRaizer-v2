@@ -1,7 +1,7 @@
 require_relative 'boot'
 
 require "rails"
-require 'dotenv/load'
+# require 'dotenv/load'
 
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -16,6 +16,7 @@ require 'fog/aws'
 
 require 'carrierwave'
 require 'carrierwave/orm/activerecord'
+require 'dotenv-rails'
 
 
 # require 'fog/aws'
