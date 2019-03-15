@@ -1,7 +1,7 @@
 require_relative 'boot'
-require 'dotenv-rails'
-require "rails"
 
+require "rails"
+require 'dotenv-rails'
 # Pick the frameworks you want:
 require "active_model/railtie"
 require "active_job/railtie"
