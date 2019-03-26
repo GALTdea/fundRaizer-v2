@@ -42,7 +42,8 @@ gem 'jbuilder', '~> 2.5'
 # used to set enviroment variables
 
 
-gem 'bootstrap', '~> 4.0'
+# gem 'bootstrap', '~> 4.0'
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
