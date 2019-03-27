@@ -1,7 +1,7 @@
 @import "/*";
 @import "bootstrap";
 @import 'gritter';
-
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 /*color themes*/
 
@@ -25,6 +25,7 @@
       /*color: rgba(255,255,255,.8);*/
       color: rgba(0,123,94, .8);
       font-size: 2em;
+      /*font-family: 'Pacifico', cursive;*/
       font-family: 'Pacifico', cursive;
 
       }
