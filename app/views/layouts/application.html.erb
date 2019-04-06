@@ -17,21 +17,23 @@
   </head>
 
   <body>
-    <div class="">
-         <%= alerts %>
-        <% if business_signed_in? %>
-          <%=  render "shared/bus_navbar" %>
-        <% elsif org_signed_in? %>
-          <%=  render "shared/org_navbar" %>
-        <% else %>
-          <%=  render "shared/navbar" %>
-        <% end %>
+    <div>
+      <div class="">
+           <%= alerts %>
+          <% if business_signed_in? %>
+            <%=  render "shared/bus_navbar" %>
+          <% elsif org_signed_in? %>
+            <%=  render "shared/org_navbar" %>
+          <% else %>
+            <%=  render "shared/navbar" %>
+          <% end %>
 
 
-      <%= yield %>
+        <%= yield %>
 
 
-      <%= render "shared/footer" %>
+        <%= render "shared/footer" %>
+      </div>
     </div>
 
   </body>
