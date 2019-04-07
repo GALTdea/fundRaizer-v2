@@ -1,7 +1,9 @@
 @import "bootstrap";
 @import 'gritter';
 
-
+.grenish{
+  color: #007b5e;
+}
 
 /* Welcome Header */
 
@@ -259,4 +261,12 @@ section .section-title {
 
 /*end*/
 
+/*button color change*/
+
+.btn-primary {
+    color: pink;
+    background-color: green;
+    border-color: #007bff;
+}
+/* END */
 
