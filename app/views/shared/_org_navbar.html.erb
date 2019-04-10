@@ -26,7 +26,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'logout ', destroy_org_session_path, method: :delete, class: 'dropdown-item' %>
               <%= link_to 'edit ', edit_org_registration_path, class: 'dropdown-item' %>
-              <%#= link_to "All Events", org_events_path(current_org), class: 'dropdown-item' %>
+              <%= link_to "All Events", org_events_path(current_org), class: 'dropdown-item' %>
             </div>
           </li>
         </ul>

@@ -9,17 +9,24 @@
   color: #007b5e;
 }
 
+.greish{
+  color: #436060;
+}
+
 .modify{
   color: white !important;
   background-color: #007b5e !important;
   border-color: #007b5e !important;
-}
 
+}
 .modify:hover{
-  background-color: #007b5e !important;
+  background-color: (0,123,94, .7) !important;
 }
 
-
+.btn-grenish{
+  background-color: #007b5e !important;
+  border-color: green !important;
+}
 
 /*.btn-primary {
     color: pink;
@@ -36,19 +43,31 @@
   font-size: 2.8em !important;
 }
 
+
+.FindSponsor{
+  font-size: 1.5em;
+
+}
 /*Navbar theming*/
   /* change brand and text color and size*/
-  .navbar-custom .navbar-brand,
-  .navbar-custom .navbar-text {
-      /*color: rgba(255,255,255,.8);*/
-      color: rgba(0,123,94, .8);
-      font-size: 2em;
-      /*font-family: 'Pacifico', cursive;*/
-      font-family: 'Pacifico', cursive;
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(0,123,94, .8);
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
 
-      }
+    }
+
+.navbar-custom .navbar-brand a:hover {
+    color: red;
+}
 
 
+  ul.nav a:hover { color: #fff !important; }
+
+/*.navbar-custom a:hover {
+  color: red;
+}*/
   /* change the link color */
   /*.navbar-custom .navbar-nav .nav-link {*/
       /*color: rgba(255,255,255,.5);*/
