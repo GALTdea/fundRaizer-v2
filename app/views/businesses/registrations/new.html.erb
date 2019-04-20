@@ -1,19 +1,38 @@
 <br>
-<div class="cotainer sign-up-stile">
+<div class="cotainer sign-up-stile team" >
+  <br>
+  <br>
+  <section>
+    <div class="container team">
+      <div class="row">
+        <div class="col-md-10">
+           <h1>Why be a Sponsor???</h1>
+           <h2>Sponsonsoring a non-profit is a great opportunity to give back to the community and generate GOODWILL in the community!
+           </h2>
+           <h2>Also</h2>
+           <h2>It's a great opportunity to MARKET your product or service</h2>
+           <h2>and generate SALES and REVENUE!!!</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <h1 class="align-center"></h1>
+      </div>
+    </div>
+  </section>
   <br>
   <div class="row">
     <div class="col-md-3"></div>
-    <div class="col-12 col-md-7 card-body sign-up-sty">
+    <div class="col-12 col-md-7 card-body sign-up-sty rounded">
         <div class="text-center mb-5">
-            <h1 class="h2 mb-2">Register Business</h1>
+            <h1 class="h2 mb-2">Register your Business</h1>
             <span></span>
         </div>
       <div class="row justify-content-center">
         <div class="col-12 col-lg-9">
-
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
-
           <div class="field form-row form-group">
             <div class="col">
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control form-control-lg", placeholder:"Email" %>
@@ -59,6 +78,8 @@
     </div>
    </div>
   </div>
+  <br>
+  <br>
 </div>
 
 
