@@ -19,7 +19,7 @@
           <!-- Links leaning right use ml-auto -->
           
           <!-- LInks linig to the right  -->
-        <ul class="navbar-nav ml-auto busNab2" >
+        <ul class="navbar-nav ml-auto busNab2 " >
           <li class="nav-item">   
               <%= link_to "Sign Up to Fundraise", new_org_registration_path, class:'nav-link' %>   
           </li>
@@ -27,16 +27,16 @@
               <%= link_to "For Sponsors/Business", new_business_registration_path, class:'nav-link' %>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item about-b">
              <%= link_to "About", pages_about_path, class:'nav-link' %>
           </li>
   
         </ul>
 
 
-        <ul class="navbar-nav ml-auto busNab ">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Loggin
+        <ul class="navbar-nav ml-auto busNab login ">
+          <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">login
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to 'Sponsor login ',  new_org_session_path, class: 'dropdown-item' %>
