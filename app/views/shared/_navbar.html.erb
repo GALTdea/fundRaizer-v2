@@ -24,22 +24,26 @@
               <%= link_to "Sign Up to Fundraise", new_org_registration_path, class:'nav-link' %>   
           </li>
           <li class="nav-item">
-              <%= link_to "For Sponsors/Business", new_business_registration_path, class:'nav-link' %>
+              <%= link_to "For Vendors/Businesses", new_business_registration_path, class:'nav-link' %>
           </li>
 
-          <li class="nav-item about-b">
+          <!-- <li class="nav-item about-b">
              <%= link_to "About", pages_about_path, class:'nav-link' %>
-          </li>
+          </li> -->
   
         </ul>
 
 
         <ul class="navbar-nav ml-auto busNab login ">
+ 
+          <li class="nav-item">
+             <%= link_to "About", pages_about_path, class:'nav-link' %>
+          </li>
           <li class="nav-item dropdown ">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">login
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to 'Sponsor login ',  new_org_session_path, class: 'dropdown-item' %>
+              <%= link_to 'Vendor login ',  new_org_session_path, class: 'dropdown-item' %>
               <%= link_to 'Fundee login ',  new_business_session_path, class: 'dropdown-item' %>
             </div>
           </li>
