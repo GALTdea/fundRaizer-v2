@@ -71,10 +71,10 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 #facebook integration 
 
 gem 'omniauth-facebook', '~> 5.0'
-
-
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.1'
 
+# icons library
+# gem 'octicons', '~> 3.0', '>= 3.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -14,22 +14,22 @@ class BusinessesController < ApplicationController
 
 private
 
-   def bus_params
-     params.require(:business).permit(:name,
-                                      :email,
-                                      :phone,
-                                      :manager,
-                                      :bus_type,
-                                      :address_1,
-                                      :address_2,
-                                      :city,
-                                      :region,
-                                      :zip_code,
-                                      :page,
-                                      :main_image,
-                                      :thumb_image
-                                    )
-   end
+ def bus_params
+   params.require(:business).permit(:name,
+                                    :email,
+                                    :phone,
+                                    :manager,
+                                    :bus_type,
+                                    :address_1,
+                                    :address_2,
+                                    :city,
+                                    :region,
+                                    :zip_code,
+                                    :page,
+                                    :main_image,
+                                    :thumb_image
+                                  )
+ end
 
 
 
