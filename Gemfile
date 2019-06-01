@@ -1,7 +1,3 @@
-
-
-
-
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -75,6 +71,10 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.1'
 
 # icons library
 # gem 'octicons', '~> 3.0', '>= 3.0.1'
+
+# access granting to admins
+gem 'pundit', '~> 2.0', '>= 2.0.1'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

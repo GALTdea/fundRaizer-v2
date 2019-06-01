@@ -8,7 +8,9 @@ Rails.application.routes.draw do
 
   # get 'proposals/New'
 
-
+# namespace :org do
+#     root "org", to: "org#show"
+# end
 
 
   get 'event_pages/index'

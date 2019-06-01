@@ -200,6 +200,8 @@ GEM
     pg (0.21.0)
     popper_js (1.14.5)
     puma (3.12.1)
+    pundit (2.0.1)
+      activesupport (>= 3.0.0)
     rack (2.0.6)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -316,6 +318,7 @@ DEPENDENCIES
   pg (~> 0.18)
   popper_js (~> 1.12, >= 1.12.9)
   puma (~> 3.7)
+  pundit (~> 2.0, >= 2.0.1)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
   spring
