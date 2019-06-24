@@ -3,8 +3,10 @@
 class Businesses::SessionsController < Devise::SessionsController
   include Accessible
   skip_before_action :check_user, only: :destroy
-  # skip_before_action :verify_signed_out_user
+
   
+  # skip_before_action :verify_signed_out_user
+
   # after_action :after_sign_out_path_for, only: :destroy
 
   # before_action :configure_sign_in_params, only: [:create]
