@@ -7,6 +7,18 @@
 /*color themes*/
 
 
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #dc3545;
+ }
+
+
+hr.new1 {
+  border-top: 3px solid red !important;
+}
+
 .about-b{
   margin-left: 7em;
 }
@@ -15,9 +27,17 @@
   color: #007b5e;
 }
 
+
+
 .greish{
   color: #436060;
 }
+
+.header-msg5{
+  color: red;
+}
+
+
 
 .modify{
   color: white !important;
@@ -188,5 +208,12 @@ body{
 
 
 
+.test100 {
+  font-size: 100px;
+
+}
 
 
+.card-h{
+  height: 411px;
+}

@@ -1,25 +1,27 @@
 Rails.application.routes.draw do
 
-  # get 'proposals/Index'
+  root to: "pages#welcome"
+  
+  get 'proposals/Index'
 
-  # get 'proposals/Show'
+  get 'proposals/Show'
 
-  # get 'proposals/Edit'
+  get 'proposals/Edit'
 
-  # get 'proposals/New'
+  get 'proposals/New'
 
 # namespace :org do
 #     root "org", to: "org#show"
 # end
 
 
-  get 'event_pages/index'
+  # get 'event_pages/index'
 
-  get 'event_pages/show'
+  # get 'event_pages/show'
 
-  get 'event_pages/edit'
+  # get 'event_pages/edit'
 
-  get 'event_pages/update'
+  # get 'event_pages/update'
 
 
 
@@ -38,20 +40,41 @@ Rails.application.routes.draw do
 
   # get 'events/edit'
 
-  resources :events
+  # resources :events
 
-  get 'orgs/index'
+  # get 'orgs/index'
 
   get 'orgs/show'
 
-  devise_for :orgs
-  #devise_for :orgs
-  devise_for :businesses
+  # devise_for :orgs
+  # devise_for :businesses
 
-  resources :businesses
-  resources :orgs
 
-  root to: "pages#welcome"
+  devise_for :businesses, controllers: {
+        sessions: 'businesses/sessions',
+        registrations: "businesses/registrations",
+        confirmations: "businesses/confirmations",
+        passwords: "businesses/passwords",
+        unlocks: "businesses/unlocks",
+
+      }
+
+  devise_for :orgs, controllers: {
+        sessions: 'orgs/sessions',
+        registrations: "orgs/registrations",
+        confirmations: "orgs/confirmations",
+        passwords: "orgs/passwords",
+        unlocks: "orgs/unlocks",
+
+      }
+
+
+
+
+ resources :businesses
+ resources :orgs
+
+  
 
   get 'pages/welcome'
 

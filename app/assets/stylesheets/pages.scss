@@ -1,12 +1,19 @@
 @import "bootstrap";
 @import 'gritter';
 
-.grenish{
-  color: #007b5e;
+
+
+/*font family*/
+
+.about-header{
+    font-family: rgb(32, 52, 59); ;
+}
+
+.vision-body{
+    color: rgb(72,72,72);
 }
 
 /* Welcome Header */
-
 .welcome-jumbotron{
   
 }
@@ -133,7 +140,8 @@
 
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 .team {
-    background: #eee !important;
+    /*background: #eee !important;*/
+    background: rgba(0, 123, 94, 0.01) !important;
 }
 
 .btn-primary:hover,
@@ -156,8 +164,8 @@ section {
 
 section .section-title {
     text-align: center;
-    color: #007b5e;
-    margin-bottom: 50px;
+    color: rgb(32, 52, 59);
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
@@ -269,4 +277,44 @@ section .section-title {
     border-color: #007bff;
 }
 /* END */
+
+.event-card{
+    padding: .001rem;
+}
+
+.card-info{
+    padding: .5rem !important;
+}
+
+/*Our Couses*/
+.card-content-1{
+    font-size: 18px;
+    margin: 0 0 1px;
+}
+
+.our-causes-link {
+    text-decoration:none;
+    color: black;
+}
+
+.our-causes-link:hover {
+    text-decoration:none;
+    color: black;
+}
+
+.our-causes-link:visited {
+    text-decoration:none;
+    color: black;
+}
+
+.sold {
+    color: green;
+}
+
+
+.event-info {
+    margin: 0 0 10px; 
+}
+
+
 

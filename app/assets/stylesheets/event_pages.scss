@@ -1,3 +1,41 @@
-// Place all the styles related to the EventPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+@import 'gritter';
+
+
+hr.orange-br{
+	border-color: #F05F40;
+    border-width: 3px;
+    max-width: 50px;
+}
+
+
+.orange-link {
+    -webkit-transition: all 0.35s !important;
+    -moz-transition: all 0.35s !important;
+    transition: all 0.35s !important;
+    color: #F05F40 !important;
+}
+
+.thinFont{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+
+#event-show-image {
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*.test200{
+	height: 350px;
+	width: 350px;
+	background-color: red;
+}*/
+
+
+#event-thumbnail{
+  height: 180px; 
+  width: 100%;
+}
