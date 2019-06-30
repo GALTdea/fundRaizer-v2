@@ -31,8 +31,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">login
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to 'Vendor login ',  new_org_session_path, class: 'dropdown-item' %>
-              <%= link_to 'Fundee login ',  new_business_session_path, class: 'dropdown-item' %>
+              <%= link_to 'Admin logout ',  new_user_session_path, class: 'dropdown-item' %>
+              <%#= link_to 'Fundee login ',  new_business_session_path, class: 'dropdown-item' %>
             </div>
           </li>
         </ul>
@@ -115,8 +115,9 @@
             <a class="nav-link fas fa-user-alt" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to "Profile", org_path(current_org), class: 'dropdown-item'  %>
+              <%#= link_to "Profile", org_path(current_org), class: 'dropdown-item'  %>
               <%= link_to "logout", destroy_org_session_path(current_org), method: :delete, class: 'dropdown-item'  %>
+              <%= link_to "Dashboar", admin_users_path , method: :delete, class: 'dropdown-item' %>
             </div>
           </li>
         </ul>

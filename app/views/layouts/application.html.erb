@@ -26,6 +26,8 @@
             <%=  render "shared/bus_navbar" %>
           <% elsif org_signed_in? %>
             <%=  render "shared/org_navbar" %>
+          <% elsif user_signed_in?  %>
+            <%=  render "shared/admin_navbar" %>
           <% else %>
             <%=  render "shared/navbar" %>
           <% end %>

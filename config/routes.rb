@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root to: "pages#welcome"
   
   get 'proposals/Index'
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
     resources :orgs
     resources :businesses
     resources :events
+    resources :users
 
     root to: "orgs#index"
   end

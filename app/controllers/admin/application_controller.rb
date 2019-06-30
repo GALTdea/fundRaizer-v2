@@ -24,6 +24,15 @@ module Admin
     end
     def authenticate_admin
       # TODO Add authentication logic here.
+      if current_user
+        flash[:success] = "No can do my boi!!!"
+        redirect_to root_path unless current_user.admin?
+        flash[:success] = "Welcome"
+      else
+        flash[:success] = "No can do my boi!!!"
+        redirect_to root_path
+
+      end
     end
 
     # Override this value to specify the number of elements to display at a time
