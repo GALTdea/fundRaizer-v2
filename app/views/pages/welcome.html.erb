@@ -95,27 +95,29 @@
 
 <!-- Feature businesses  -->
 <main class="feat-bus">
-  <main>
-    <div class="currentEvents">
-      <h1 class="text-center font3 c-ev " > Causes in your Area </h1>
-    </div>
-  </main>
 
-  <div class="py-5 ">
+
+  
     <div class="container" >
+      <main>
+        <div class="currentEvents">
+          <h3 class="text-center font3 c-ev" >Our Cause</h3>
+          <p class="our-cause">We believe that the best we can do four our future is empowering our youth. Please support our annual Youth Entrepreneurial Empowering Campaign….</p>
+        </div>
+      </main>
       <div class="row" >
         <div class="col-md-3">
           <div class="card mb-4 box-shadow card-h event-card text-center">
             <%= link_to event_page_path(1), class:'our-causes-link', style: "text-decoration:none" do%>
-              <%= image_tag "event_image.png", alt: "default-image", id: "event-thumbnail" %>
+              <%= image_tag "joymode-outdoormovie.252.jpeg", alt: "default-image", id: "event-thumbnail" %>
               <div class="card-body card-info ">
                 <!-- <h4 class="wrap"><%#= truncate event.title, length: 49 %></h4> -->
-                <h3 class="card-content-1 thinFont"> Feast and Build </h3>
-                <p class="event-info">By: Fund For Empowerment<br>
-                   Time: 12:00 PM <br>
-                   Event Date: Monday, July 01 2019 <br>
+                <h3 class="card-content-1"> Joymode </h3>
+                <p class="com-desc">Curated product bundles delivered to your door</p>
+                 <p class="com-desc1">  
+                   Make moments with Joymode and they will donate 30% from each subscription
                 </p>
-                <p class="sold">90 sold 10 left!</p>
+                <p class="sold">595 sold 355 left!</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
@@ -127,15 +129,15 @@
         <div class="col-md-3">
           <div class="card mb-4 box-shadow card-h event-card text-center">
             <%= link_to event_page_path(1), class:'our-causes-link', style: "text-decoration:none" do%>
-              <%= image_tag "event_image.png", alt: "default-image", id: "event-thumbnail" %>
+              <%= image_tag "sb-TeaFinal.jpeg", alt: "default-image", id: "event-thumbnail" %>
               <div class="card-body card-info ">
                 <!-- <h4 class="wrap"><%#= truncate event.title, length: 49 %></h4> -->
-                <h3 class="card-content-1"> Feast and Build </h3>
-                <p class="event-info">By: Fund For Empowerment<br>
-                   Time: 12:00 PM <br>
-                   Event Date: Monday, July 01 2019 <br>
+                <h3 class="card-content-1"> Starbucks </h3>
+                <p class="com-desc">$10 Starbucks gift certificate</p>
+                 <p class="com-desc1">  
+                   Starbucks will donate %100 of the proceeds
                 </p>
-                <p class="sold">90 sold 10 left!</p>
+                <p class="sold">753 sold 247 left!</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
@@ -150,12 +152,12 @@
               <%= image_tag "event_image.png", alt: "default-image", id: "event-thumbnail" %>
               <div class="card-body card-info ">
                 <!-- <h4 class="wrap"><%#= truncate event.title, length: 49 %></h4> -->
-                <h3 class="card-content-1"> Feast and Build </h3>
-                <p class="event-info">By: Fund For Empowerment<br>
-                   Time: 12:00 PM <br>
-                   Event Date: Monday, July 01 2019 <br>
+                <h3 class="card-content-1"> Starbucks </h3>
+                <p class="com-desc">$10 Starbucks gift certificate</p>
+                 <p class="com-desc1">  
+                   Starbucks will donate %100 of the proceeds
                 </p>
-                <p class="sold">90 sold 10 left!</p>
+                <p class="sold">753 sold 247 left!</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
@@ -167,15 +169,15 @@
         <div class="col-md-3">
           <div class="card mb-4 box-shadow card-h event-card text-center">
             <%= link_to event_page_path(1), class:'our-causes-link', style: "text-decoration:none" do%>
-              <%= image_tag "event_image.png", alt: "default-image", id: "event-thumbnail" %>
+              <%= image_tag "wag180.png", alt: "default-image", id: "event-thumbnail" %>
               <div class="card-body card-info ">
                 <!-- <h4 class="wrap"><%#= truncate event.title, length: 49 %></h4> -->
-                <h3 class="card-content-1"> Feast and Build </h3>
-                <p class="event-info">By: Fund For Empowerment<br>
-                   Time: 12:00 PM <br>
-                   Event Date: Monday, July 01 2019 <br>
+                <h3 class="card-content-1"> Wag! </h3>
+                <p class="com-desc">$20 Wag gift certificate</p>
+                 <p class="com-desc1">  
+                   Wag will donate $30 each certificate we sell
                 </p>
-                <p class="sold">90 sold 10 left!</p>
+                <p class="sold">753 sold 247 left!</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
                   </div>
@@ -184,8 +186,18 @@
            <% end -%>
           </div> 
         </div>
+
+        <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <button type="button" class="btn btn-outline-secondary mb-4 btn-more">Browse all Sponsors</button>
+            </div>
+          </div>
+        </div>
+
+        
       </div>
     </div>
-  </div> 
+  
 </main>
 <!-- end feature businesses  -->

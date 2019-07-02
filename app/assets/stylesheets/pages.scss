@@ -110,11 +110,15 @@
 }
 
 .c-ev{
-	font-size: 50px;
+	font-size: 2em;
 }
 .currentEvents{
 	/*color: white;*/
-	padding-top: 3rem;
+	padding-top: 1rem;
+}
+
+.our-cause{
+    font-size: 1.2em;
 }
 
 
@@ -299,10 +303,26 @@ section .section-title {
 }
 
 /*Our Couses*/
+
+
+.com-desc{
+    line-height: 17px;
+    color: #716d6d;
+}
+
+
+.com-desc1{
+    line-height: 17px;
+    color: #716d6d;
+}
+
 .card-content-1{
     font-size: 18px;
     margin: 0 0 1px;
 }
+
+
+
 
 .our-causes-link {
     text-decoration:none;
@@ -329,4 +349,8 @@ section .section-title {
 }
 
 
+
+.btn-more{
+    border-radius: 300px !important;
+}
 
