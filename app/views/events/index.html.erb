@@ -3,19 +3,24 @@
 <br>
 <br>
 <div class="container">
-  
-    <% @events.each do |f| %>
-    <div class="row eventCard">
-      <%= link_to f.name, event_path(f) %> || <%= event_confirmation_helper (f) %> <br>
-      <%= confirmation_message f %>
+  <div class="container">
+      <% if current_business.events.empty? %>
+       <h1>No events yet</h1>
+      <% end %>
+      <% current_business.events.each do |f| %>
+      <div class="row eventCard">
+        <%= link_to f.name, event_path(f) %> || <%= event_confirmation_helper (f) %> <br>
+        <%= confirmation_message f %>
+        <br>
+        <br>
+      </div>
+
       <br>
-      <br>
+      <% end %>
     </div>
-    <br>
-    <% end %>
+
   </div>
 
+
+
 </div>
-
-
-
