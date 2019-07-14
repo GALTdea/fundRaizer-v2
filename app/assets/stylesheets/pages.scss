@@ -5,6 +5,8 @@
 
 /*font family*/
 
+
+
 .about-header{
     font-family: rgb(32, 52, 59); ;
 }
@@ -34,7 +36,6 @@
 
 
 
-
 .first-slide-pic{
 	width: auto;
 	height: 20px;
@@ -49,11 +50,6 @@
 	padding-bottom: 0em;
 
 }
-
-.carousel-inner{
-	/*height: 250rem;*/
-}
-
 
 
 .busNab{
@@ -78,16 +74,16 @@
 	color: gray;
 	padding-bottom: 7em;
 	padding-top: 7em;
-	/*background-image: linear-gradient(#f8fcfb, #e8f4f0);*/
 	background-image: linear-gradient(#e8f4f0,#f8fcfb );
 	min-width: 100%;
 
 }
 
 
-/*.p-story{
-	max-width: 100%;
-}*/
+.p-story{
+	width: 100%;
+    background-color:  #fff!important;
+}
 
 .story-row{
 	margin-top: rem;
@@ -353,4 +349,60 @@ section .section-title {
 .btn-more{
     border-radius: 300px !important;
 }
+
+
+
+
+
+/* Our Causes Pages  */
+
+.our-cause-header{
+    height: 640px;
+}
+
+
+.our-cause-header-t1{
+    margin-top: 15px;
+}
+
+.section-2 {
+    /*margin-top: -1px;*/
+    height:  640px;
+    background-color: #fff!important;
+    padding-left: 83.33333px;
+    padding-right: 83.33333px;
+    color: #2650d4;
+}
+
+.oc_about{
+    max-height: 640px;
+    font-weight: 700;
+    line-height: 1.1;
+    
+    font-size: 58px;
+}
+
+.ab-text{
+    font-size: 18px;
+    font-weight: 200;
+    font-family: 'Merriweather', serif;
+}
+
+.section-3{
+    height:  640px;
+    background-color: #dbfcff!important;
+}
+
+
+.section-4{
+    background-color: #fff!important;
+    height: 640px;
+
+}
+
+
+
+
+
+
 

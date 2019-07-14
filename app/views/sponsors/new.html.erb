@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+<h1>Create a Sponsor</h1>
+
+
+<%= form_for @sponsor do |f| %>
+  <%#= f.error_notification %>
+
+<div class="">
+  <%= f.text_field :company_name, placeholder:" Company Name" %>
+</div>
+<br>
+<div>
+  <%= f.text_field :business_type, placeholder:"Business Type" %>
+</div>
+<br>
+<div>
+  <%= f.text_field :address, placeholder:" Address" %>
+</div>
+<br>
+<div>
+  <%= f.text_field :manager, placeholder:"Manager Name" %>
+</div>
+<br>
+
+<br>
+<%= f.submit "Sign up" %>
+ 
+<% end %>
+
+
+</div>

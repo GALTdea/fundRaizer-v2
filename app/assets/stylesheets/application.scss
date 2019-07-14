@@ -82,18 +82,18 @@ hr.new1 {
   /* change brand and text color and size*/
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: rgba(0,123,94, .8);
-    font-size: 2em;
+    text-decoration: none !important;
+    font-size: 1.8em;
     font-family: 'Pacifico', cursive;
-
+    color: rgba(0,123,94, .8);
     }
 
-.navbar-custom .navbar-brand a:hover {
-    color: red;
+.navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
+    color: rgba(0,123,94, .8);
 }
 
 
-  ul.nav a:hover { color: #fff !important; }
+  
 
 /*.navbar-custom a:hover {
   color: red;

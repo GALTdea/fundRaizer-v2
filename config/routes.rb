@@ -1,16 +1,26 @@
 Rails.application.routes.draw do
 
+  # get 'sponsors/index'
+
+  # get 'sponsors/show'
+
+  # get 'sponsors/new'
+
+  # get 'sponsors/edit'
+
+  resources :sponsors
+
   devise_for :users
   
   root to: "pages#welcome"
   
-  get 'proposals/Index'
+  # get 'proposals/Index'
 
-  get 'proposals/Show'
+  # get 'proposals/Show'
 
-  get 'proposals/Edit'
+  # get 'proposals/Edit'
 
-  get 'proposals/New'
+  # get 'proposals/New'
 
 # namespace :org do
 #     root "org", to: "org#show"
@@ -84,6 +94,8 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/home'
+  
+  get 'pages/ourcause'
 
 
   resources :businesses do

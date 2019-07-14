@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190628031834) do
+ActiveRecord::Schema.define(version: 20190714005823) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20190628031834) do
     t.bigint "business_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "short_desc"
     t.index ["business_id"], name: "index_event_pages_on_business_id"
     t.index ["event_id"], name: "index_event_pages_on_event_id"
     t.index ["org_id"], name: "index_event_pages_on_org_id"
@@ -135,6 +136,19 @@ ActiveRecord::Schema.define(version: 20190628031834) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["org_id"], name: "index_proposals_on_org_id"
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.string "company_name"
+    t.string "business_type"
+    t.text "about"
+    t.string "address"
+    t.string "city"
+    t.string "region"
+    t.string "zip_code"
+    t.string "manager"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

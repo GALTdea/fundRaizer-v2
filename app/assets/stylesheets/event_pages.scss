@@ -2,11 +2,66 @@
 @import 'gritter';
 
 
+
+.os{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.thinFont{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.italic{
+    font-style: italic;
+}
+
+
 hr.orange-br{
 	border-color: #F05F40;
     border-width: 3px;
     max-width: 50px;
 }
+
+.ev_name{
+    margin-bottom: 2px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.short_desc{
+    font-size: 1em;
+    color: #333;
+    font-weight: 300;
+}
+
+.by{
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: #333;
+    
+}
+
+
+
+.by_link{
+    color: #333 !important;
+    text-decoration: none !important;
+    text-decoration: none;
+    
+
+}
+
+
+
+.inBene_link{
+    color: #333 !important;
+    text-decoration: none;
+    text-decoration: none !important;
+
+}
+
 
 
 .orange-link {
@@ -16,9 +71,6 @@ hr.orange-br{
     color: #F05F40 !important;
 }
 
-.thinFont{
-	font-family: 'Open Sans Condensed', sans-serif;
-}
 
 
 #event-show-image {
@@ -28,14 +80,22 @@ hr.orange-br{
 }
 
 
-/*.test200{
-	height: 350px;
-	width: 350px;
-	background-color: red;
-}*/
+
 
 
 #event-thumbnail{
   height: 180px; 
   width: 100%;
 }
+
+
+.EPabout{
+    font-size: 1em;
+}
+
+
+.sales_info{
+    height: 150px;
+}
+
+

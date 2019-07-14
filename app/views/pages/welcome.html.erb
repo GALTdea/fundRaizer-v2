@@ -64,12 +64,11 @@
 
 
 <!-- Product story  -->
-
-  <div class="container marketing d-flex justify-content-center text-center p-story " >
+<section class="p-story">
+  <div class="container  d-flex justify-content-center text-center  " >
     <!-- Three columns of text below the carousel -->
-    <div class="row story-row" >
-      <div class="col-lg-4">
-        <!-- <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="240px" height="240px"> -->
+    <div class="row story-row pt-5" >
+      <div class="col-lg-4 ">
         <img class="rounded-circle" src="pages/search-icon-gray.png" alt="Generic placeholder image" width="240px" height="240px">
         
         <h3 class=" blackish">Search & Connect</h3>
@@ -89,7 +88,7 @@
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->      
   </div>
-
+</section>
 <!-- End Product story  -->
 
 
@@ -122,27 +121,30 @@
               </div>
            <% end -%>
           </div>
-        </div>       
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow card-h event-card text-center">
-            <%= link_to event_page_path(1), class:'our-causes-link', style: "text-decoration:none" do%>
-              <%= image_tag "sb-TeaFinal.jpg", alt: "default-image", class:"img-fluid" , id: "event-thumbnail" %>
-              <div class="card-body card-info ">
-                <!-- <h4 class="wrap"><%#= truncate event.title, length: 49 %></h4> -->
-                <h3 class="card-content-1"> Starbucks </h3>
-                <p class="com-desc">$10 Starbucks gift certificate</p>
-                 <p class="com-desc1">  
-                   Starbucks will donate %100 of the proceeds
-                </p>
-                <p class="sold">753 sold 247 left!</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
+        </div>    
+          
+          <div class="col-md-3">
+            <div class="card mb-4 box-shadow card-h event-card text-center">
+              <%= link_to event_page_path(1), class:'our-causes-link', style: "text-decoration:none" do%>
+                <%= image_tag "sb-TeaFinal.jpg", alt: "default-image", class:"img-fluid" , id: "event-thumbnail" %>
+                <div class="card-body card-info ">
+                  <!-- <h4 class="wrap"><%#= truncate event.title, length: 49 %></h4> -->
+                  <h3 class="card-content-1"> Starbucks </h3>
+                  <p class="com-desc">$10 Starbucks gift certificate</p>
+                   <p class="com-desc1">  
+                     Starbucks will donate %100 of the proceeds
+                  </p>
+                  <p class="sold">753 sold 247 left!</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
                   </div>
                 </div>
-              </div>
-           <% end -%>
+             <% end -%>
+            </div>
           </div>
-        </div>
+        
+
         <div class="col-md-3">
           <div class="card mb-4 box-shadow card-h event-card text-center">
             <%= link_to event_page_path(1), class:'our-causes-link', style: "text-decoration:none" do%>
@@ -188,6 +190,11 @@
         <div class="row">
           <div class="col text-center">
             <button type="button" class="btn btn-outline-secondary mb-4 btn-more">Browse all Sponsors</button>
+            </div>
+          </div>
+          <br>
+          <div class="col text-center">
+              <%= link_to "Browse all Sponsors", sponsors_path, class:"" %>
             </div>
           </div>
         </div>
