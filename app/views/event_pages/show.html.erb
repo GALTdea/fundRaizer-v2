@@ -1,105 +1,27 @@
   <%# provide(:title, @page.name) %> 
   <!-- Page Content -->
-  <br>
-  <br>
+<br>
+<br>
+<br>
+<br>
 <div class="container">
-	<div class="header-row" id="header-row" style="padding: 0px; overflow:hidden; height:100px;">
-		    <!-- container-fluid is the same as container but spans a wider viewport, 
-		it still has padding though so you need to remove this either by adding 
-		another class with no padding or inline as I did below -->
-	  <div class="container-fluid" style="padding: 0px;">
-		<div class="row"> 
-			    <!-- 
-				        You originally has it set up for two columns, remove the second 
-				    column as it is unneeded and set the first to always span all 12 columns 
-				    even when at its smallest (xs). Set the overflow to hidden so no matter 
-				    the height of your image it will never show outside this div
-				-->
-		    <div class="col-xs-12"> 
-		        <a class="navbar-brand logo" href="index.html">
-			        <!-- place your image here -->
-		           <img src="http://placekitten.com/g/1200/600" alt="company logo" style="width: 100%;">
-		        </a> 
-		    </div>     
+	<div class="row">
+		<div class="col-lg-8">
+			<h1  class=" ev_name mt-5  "> event name </h1>
+	    	<h5 class="short_desc"> test </h5>
+	    	<p class="by"> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+	    	<p class="inBene">
+	    		In benefit of: <%= link_to @page.org.manager, @page.org.manager, class: "inBene_link" %>
+	    	</p>
+	    	<p><i class="fa fa-calendar"></i><b> When: </b><%= @page.date_start.strftime("%F") %></p>
+	    	<%= image_tag("event_image.png", :alt => "rss feed", class:"", id: "event-show-image") %>
 		</div>
-	</div>
-</div>
-</div>
-
-<div class="container">
-	<div class="row os">
-	  <div class="col-lg-8">
-	    <!-- Event Content -->
-	    <h1  class=" ev_name mt-5  "> <%= @page.event_name  %> </h1>
-	    <h5 class="short_desc"><%= @page.short_desc %></h5>
-	    <p class="by">Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
-	    <p class="inBene">In benefit of: <%= link_to @page.org.manager, @page.org.manager, class: "inBene_link" %></p>
-	    <!-- invited by should come next -->
-	    <i class="fa fa-calendar"></i><b> When: </b><%= @page.date_start.strftime("%F") %></p>
-	    <%# if @event.picture? %>
-	      <%#= image_tag @event.picture.url, class: "img-responsive", id: "event-show-image", alt: @event.picture %>
-	      <%= image_tag("event_image.png", :alt => "rss feed", class:"img-responsive", id: "event-show-image") %>
-	    <%# else %>
-	      <%#= image_tag "event-show-default.jpg", class: "img-responsive", alt: "default-image" %>       
-	    <%# end %>
-	              
-	    <p class="lead wrap EPabout mt-4" >Event Description: <%= @page.about %></p><br>
-	    <% if current_org%>
-	      <p class="lead center" ><%= link_to "Edit Event", edit_event_path(@event), class: "btn btn-primary", id: "show-edit-button" %><%= link_to "Delete Event", @event, method: :delete, data: { confirm: "You sure?" }, class: "btn btn-primary" %></p>
-	    <% end %>
-	    <%# if @page.date > Time.now %>  
-	        <div id="attend_form" >
-	          <%# if current_user.attending?(@event) %>
-	            <%#= render "unattend" %>
-	          <%# else %>
-	            <%#= render "attend" %>
-	          <%# end %>
-	        </div>
-	      <%# else %>
-	        <p class="center">Event has ended</p>
-	        <div class="testDiv"></div>
-	      <%# end %>
-	    <%# else %>  
-	      <!-- <h4 class="lead center" >(Please <%#= link_to "Log In", login_path %> or  <%#= link_to "Sign Up", signup_path %> to attend and comment on this event)</h4> -->
-	    <%# end %><br>
-
-	    <!-- Attendees -->
-	    <% if @page.date_start > Time.now %> 
-	      <p class="lead center">People attending this event (<span id="attendees"><%#= @event.attendees.count %></span>)</p>
-	    <% else %>
-	      <p class="lead center" >People that attended this event (<span id="attendees"><%#= @event.attendees.count %></span>)</p> 
-	    <% end %>
-	    <hr>
-	    <div id="users_attending" >
-	      <%# @event.attendees.each do |user| %>
-	        <li style="text-align:center; list-style: none; font-size: 16px;">Name: <%#= link_to user.name, user %></li>
-	      <%# end %>
-	    </div>
-	    <hr id="separator">
-
-	    <!-- Comments -->
-	    <h3 class="center" id="comment_count">Comments (<%#= @event.comments.count %>)</h3>
-	    <hr>
-	    <div class="media comment_list" ">
-	      <%#= render @comments %>
-	    </div>
-	    <%# if current_user %>
-	      <div class="well">
-	        <h4>Leave a Comment:</h4>
-	        <%#= render 'comments/form' %>
-	      </div>
-	    <%# end %>
-	  </div>
-	  <!-- Event Sidebar -->
-	  <div class="col-md-4 border-left">
-	    <!-- form -->
-	    <div class="container ">
-	    	<div class="row">
-	    		<div class="sales_info">
+		<div class="col-md-4">
+			<div class="sales_info">
 	    			
-	    		</div>
 	    	</div>
-		    <form>
+	    	<br>
+	    	<form>
 			    <select class="form-control">
 				  <option>Selection Option</option>
 				</select>
@@ -107,7 +29,6 @@
 				<select class="form-control">
 				  <option>Select Number of People</option>
 				</select>
-
 				<br>
 				<button type="button" class="btn btn-secondary btn-lg btn-block btn-success"> Buy </button>
 				<button type="button" class="btn btn-secondary btn-lg btn-block mt-2 "> Give as a Gift </button>
@@ -122,6 +43,23 @@
 				<ion-icon size="large", name="text"></ion-icon>
 			</div>
 		</div>
-	  </div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">  	
+	    	<p class="lead wrap EPabout mt-4" >Event Description: about</p><br>
+	    	<p class="">Event has ended</p>
+		    <div id="" >
+		        <li style="text-align:center; list-style: none; font-size: 16px;">Name: </li>
+		    </div>
+			<br>
+	    	<h3 class="center" id="comment_count"> Comments </h3>
+	    	<br>
+	    	<br>
+	    	<h4>Leave a Comment: </h4>
+		</div>
+		
 	</div>
 </div>
+
+
+
