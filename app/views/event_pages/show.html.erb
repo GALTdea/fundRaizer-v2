@@ -9,9 +9,9 @@
 		<div class="col-lg-8">
 			<h1  class=" ev_name mt-5  "> event name </h1>
 	    	<h5 class="short_desc"> test </h5>
-	    	<p class="by"> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+	    	<p class="by"> Invited by: <%#= link_to @page.org.manager ,@page.org.manager, class: "by_link " %> name</p>
 	    	<p class="inBene">
-	    		In benefit of: <%= link_to @page.org.manager, @page.org.manager, class: "inBene_link" %>
+	    		In benefit of: name<%#= link_to @page.org.manager, @page.org.manager, class: "inBene_link" %>
 	    	</p>
 	    	<p><i class="fa fa-calendar"></i><b> When: </b><%= @page.date_start.strftime("%F") %></p>
 	    	<%= image_tag("event_image.png", :alt => "rss feed", class:"", id: "event-show-image") %>
