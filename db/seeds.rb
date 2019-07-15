@@ -154,6 +154,23 @@ Event.create!(
 puts '1 Event Created'
 
 
+EventPage.create!(
+    address: "Test Event 2",
+    date_start: "12/25/18",
+    date_end: "this is just a test to test seeding ",
+    about: "this is just a test to test seeding ",
+    date_end: "this is just a test to test seeding ",
+    short_desc: "this is just a test to test seeding ",
+    event_id: Event.first.id,
+    business_id: Business.first.id,
+    org_id: Org.first.id,
+    )
+
+puts '1 Event Page Created'
+
+
+
+
 
 
 

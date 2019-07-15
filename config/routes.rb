@@ -43,7 +43,8 @@ Rails.application.routes.draw do
     resources :businesses
     resources :events
     resources :users
-
+    resources :event_pages
+    
     root to: "orgs#index"
   end
 

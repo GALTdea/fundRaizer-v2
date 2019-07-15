@@ -10,7 +10,6 @@ class EventDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     business: Field::BelongsTo,
     org: Field::BelongsTo,
-    event: Field::BelongsTo,
     id: Field::Number,
     name: Field::String,
     date: Field::DateTime,
@@ -28,7 +27,6 @@ class EventDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :business,
     :org,
-    :event,
     :id,
     :name,
   ].freeze
@@ -38,7 +36,6 @@ class EventDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :business,
     :org,
-    :event,
     :id,
     :name,
     :date,
@@ -53,7 +50,6 @@ class EventDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :business,
-    :event,
     :org,
     :name,
     :date,

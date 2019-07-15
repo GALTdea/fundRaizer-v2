@@ -1,6 +1,6 @@
 require "administrate/base_dashboard"
 
-class EventDashboard < Administrate::BaseDashboard
+class EventPageDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -12,12 +12,14 @@ class EventDashboard < Administrate::BaseDashboard
     org: Field::BelongsTo,
     event: Field::BelongsTo,
     id: Field::Number,
-    name: Field::String,
-    date: Field::DateTime,
-    about: Field::Text,
+    event_name: Field::String,
     address: Field::String,
+    date_start: Field::DateTime,
+    date_end: Field::DateTime,
+    about: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    short_desc: Field::String,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -30,7 +32,6 @@ class EventDashboard < Administrate::BaseDashboard
     :org,
     :event,
     :id,
-    :name,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -40,12 +41,14 @@ class EventDashboard < Administrate::BaseDashboard
     :org,
     :event,
     :id,
-    :name,
-    :date,
-    :about,
+    :event_name,
     :address,
+    :date_start,
+    :date_end,
+    :about,
     :created_at,
     :updated_at,
+    :short_desc,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -53,18 +56,20 @@ class EventDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :business,
-    :event,
     :org,
-    :name,
-    :date,
-    :about,
+    :event,
+    :event_name,
     :address,
+    :date_start,
+    :date_end,
+    :about,
+    :short_desc,
   ].freeze
 
-  # Overwrite this method to customize how events are displayed
+  # Overwrite this method to customize how event pages are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(event)
-  #   "Event ##{event.id}"
+  # def display_resource(event_page)
+  #   "EventPage ##{event_page.id}"
   # end
 end
