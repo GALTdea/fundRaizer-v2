@@ -16,5 +16,12 @@ end
 
 
 
+# determine if  EventPage 
+def event_page_show? 
+ controller_name == "event_pages" && action_name == "show"
+end
+
+
+
   
 end
