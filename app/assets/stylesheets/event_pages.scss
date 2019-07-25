@@ -26,7 +26,8 @@ hr.orange-br{
 .ev_name{
     margin-bottom: 2px;
     font-size: 2.2rem;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .short_desc{
@@ -101,4 +102,24 @@ hr.orange-br{
 .ion-icon{
     font-size: 64px;
 }
+
+
+
+
+.btn-outline-secondary.custom-btn   {
+    font-size: 1em !important;
+    /*background-color: #000 !important;*/
+    border-color: #000;
+    font-weight: 300 !important;
+
+}
+
+.btn-outline-secondary.custom-btn:hover  {
+    font-size: 1em !important;
+    background-color: #6c757d !important;
+    border-color: #000;
+    font-weight: 300 !important;
+
+}
+
 

@@ -19,11 +19,19 @@
 
 /* Welcome Header */
 .welcome-jumbotron{
-  
+  background-color: #E6F4F0 !important;
 }
 
+.welcome-jumbotron{
+  background-color: #E6F4F0 !important;
+}
+
+
+
 .header-msg{
-	font-size: 45px
+	font-size: 3.9em;
+    font-family: 'Varela Round', sans-serif;
+    color: rgba(0, 0, 0, 0.85);
 }
 
 .header-msg2{
@@ -33,7 +41,9 @@
 }
 
 .welcome-header{
-	background-image: linear-gradient(#f8fcfb, #e8f4f0);
+	/*background-image: linear-gradient(#f8fcfb, #e8f4f0);*/
+    
+
 }
 
 
@@ -108,23 +118,38 @@
 }
 
 .c-ev{
-	font-size: 1.8em;
+	font-size: 1.6em;
+    margin-bottom: 0px;
 }
+
+.c-ev1{
+    color: rgba(0, 0, 0, 0.85) !important;
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+}
+
+.c-ev1:hover {
+    color: rgba(0, 0, 0, 0.85) !important;
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+}
+
+
+
 .currentEvents{
 	/*color: white;*/
 	padding-top: 1rem;
 }
 
 .our-cause{
-    font-size: 1.2em;
+    font-size: 1em;
+    color: #6a787c;
 }
 
 
 .product-story{
-
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: #716d6d;
-
 }
 
 
