@@ -18,8 +18,14 @@
 }
 
 /* Welcome Header */
+
+.header-msg0{
+    font-size: 1.2em;
+    font-family: 'Varela Round', sans-serif;
+}
 .welcome-jumbotron{
-  background-color: #E6F4F0 !important;
+  /*background-color: #E6F4F0 !important;*/
+  background-color: white !important;
 }
 
 .welcome-jumbotron{
@@ -29,7 +35,7 @@
 
 
 .header-msg{
-	font-size: 3.9em;
+	font-size: 3em;
     font-family: 'Varela Round', sans-serif;
     color: rgba(0, 0, 0, 0.85);
 }

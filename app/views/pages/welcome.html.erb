@@ -1,26 +1,32 @@
 <!-- <br class="d-none .d-sm-block .d-md-none"> -->
 <div class="row .d-none .d-sm-block .d-md-none smTopMargin"></div>
-<div style="background:#E6F4F0 !important", class="jumbotron welcome-header font3">
-  <div class="container">
+
+<div class="row text-center mt-2 ">
+  <div class="col-md-12 header-msg0">Find the right sponsor and launch a fundraising campaign in minutes!</div>
+</div>
+<div style="background: white !important", class="jumbotron welcome-header font3">
+  <div class="container ">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="header-msg blackish">
-          Groupon for
-          <br>
-          fundraising
+        <h1 class="header-msg blackish text-center">
+          Where Causes meet Sponsors
         </h1>
         <div class="">
-          <p class="header-msg2 greish">
+          <p class="header-msg2 greish">Partner up with any of our Sponsors and organize Groupon like deals.
             Your supporters buy the deals and your organization gets
-            <span class="border-top my-3"></span>
-            up to 50% of the revenue.
-            <br>
+            up to 50% of the revenue. <br>
+            Like a Groupon for goFundme! <br>
+
             Find a sponsor and get started in just a couple of minutes!
           </p>
         </div>
         <% if business_signed_in? or org_signed_in? %>
         <% else %>
-         <%= link_to "Start a Campaign", new_org_registration_path, class:"btn btn-lg btn-primary btn-grenish" %>
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <%= link_to "Start a Campaign", new_org_registration_path, class:"btn btn-lg btn-primary btn-grenish " %>
+         </div>
+          </div> 
         <% end %>
       </div>
       <div class="col-md-6">

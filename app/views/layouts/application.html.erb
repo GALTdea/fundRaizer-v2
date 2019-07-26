@@ -32,13 +32,9 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
 
-    
-     
   </head>
 
-  <body class="test">
-    <div class="test-">
-      <div class="test 5">
+  <body class="">
            <%= alerts %>
           <% unless controller_name == "event_pages" && action_name == "show" %>
             <% if business_signed_in? %>
@@ -53,8 +49,5 @@
           <% end %>
         <%= yield %>
         <%= render "shared/footer" %>
-      </div>
-    </div>
-
   </body>
 </html>
