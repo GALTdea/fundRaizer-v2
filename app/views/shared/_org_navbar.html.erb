@@ -7,6 +7,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">       
+            <li class="nav-item sponsor-list">
+              <%= link_to "Find a Sponsor", businesses_path, class: "nav-link sponsor-list ml-5 FindSponsor rounded-pill" %>
+            </li>
+          </ul>
         <ul class="navbar-nav ml-auto busNab login ">
           <li class="nav-item">
              <%= link_to "About", pages_about_path, class:'nav-link' %>
