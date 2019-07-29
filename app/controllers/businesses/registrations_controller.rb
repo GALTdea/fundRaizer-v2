@@ -10,9 +10,13 @@ class Businesses::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+     super
+     if @business.persisted?
+      BusinessNotifierMailer.send_signup_email(@business).deliver
+      
+    end
+   end
 
   # GET /resource/edit
   # def edit
