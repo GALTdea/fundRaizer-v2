@@ -19,9 +19,9 @@ private
 
   def devise_parameter_sanitizer
     if resource_class == Business
-      BusinessParameterSanitizer.new(Business, :business, params)
+       Business::ParameterSanitizer.new(Business, :business, params)
      elsif resource_class == Org
-      Org::ParameterSanitizer.new(Org, :org, params)
+       Org::ParameterSanitizer.new(Org, :org, params)
     else
       super # Use the default one
     end

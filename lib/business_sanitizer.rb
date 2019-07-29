@@ -1,4 +1,4 @@
-class BusinessParameterSanitizer < Devise::ParameterSanitizer
+class Business::ParameterSanitizer < Devise::ParameterSanitizer
   def initialize(*)
     super
     permit(:sign_up, keys: [ :name , :email, :password,  :manager, :phone_number, :bus_type, :address_1, :city, :region, :zip_code,:main_image, :thumb_image])

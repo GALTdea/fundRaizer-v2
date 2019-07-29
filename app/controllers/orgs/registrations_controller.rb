@@ -10,9 +10,18 @@ class Orgs::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+    # Deliver the signup email
+    if @org.persisted?
+      OrgNotifierMailer.send_signup_email(@org).deliver
+      
+    end
+  end
+
+
+
+
 
   # GET /resource/edit
   # def edit

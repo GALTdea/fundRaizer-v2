@@ -1,3 +1,4 @@
+<div class="container">
   <%# provide(:title, @page.name) %> 
 <div class="container">
 	<div class="header-row" id="header-row" style="padding: 0px; overflow:hidden; height:100px;">
@@ -20,7 +21,9 @@
 			<h1  class=" ev_name mt-2 "> Event Name </h1>
 	    	<h5 class="short_desc"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	        </h5>
-	    	<p class="by lead"> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+	    	<p class="by "> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+	    	<hr class="orange-br" >
+
 	    	<p class="inBene lead">
 	    		In benefit of: <%= link_to @page.org.manager, @page.org.manager, class: "inBene_link" %>
 	    	</p>
@@ -117,6 +120,6 @@
 		</div>
 	</div>
 </div>
-
+</div>
 
 
