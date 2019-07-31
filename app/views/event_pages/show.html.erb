@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <%# provide(:title, @page.name) %> 
 <div class="container">
 	<div class="header-row" id="header-row" style="padding: 0px; overflow:hidden; height:100px;">
@@ -6,31 +6,23 @@
 			<div class="row"> 
 			    <div class="col-xs-12"> 
 			        <a class="navbar-brand logo" href="index.html">
-				        <!-- place your image here -->
-			           <img src="http://placekitten.com/g/1200/600" alt="company logo" style="width: 100%;">
+				         place your image here -->
+			           <!-- <img src="http://placekitten.com/g/1200/600" alt="company logo" style="width: 100%;">
 			        </a> 
 			    </div>     
 			</div>
 		</div>
     </div>
-</div>
+</div> -->
+
 <br>
 <div class="container">
 	<div class="row">
-		<div class="col-lg-8 text-center ">
-			<h1  class=" ev_name mt-2 "> Event Name </h1>
-	    	<h5 class="short_desc"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		<!-- q1 -->
+		<div class="col-lg-8">
+			<h1  class=" ev_name mt-2  "> Event Name </h1>
+	    	<h5 class="short_desc"> <ion-icon name="pricetag"></ion-icon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	        </h5>
-	    	<p class="by "> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
-	    	<hr class="orange-br" >
-
-	    	<p class="inBene lead">
-	    		In benefit of: <%= link_to @page.org.manager, @page.org.manager, class: "inBene_link" %>
-	    	</p>
-	    	<p>
-	    		<i class="fa fa-calendar"></i><b> When: </b><%#= @page.date_start.strftime("%F") %>
-	    	</p>
-
 	    	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			  <ol class="carousel-indicators">
 			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -60,56 +52,94 @@
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
-	    	<%#= image_tag("event_image.png", :alt => "rss feed", class:"img-fluid ", id: "") %>
+			<p class=" d-none d-sm-block lead EPabout mt-4" >Event Description: about</p><br>
 		</div>
-		<div class="col-md-4">
-			<div class="sales_info">
-	    			
-	    	</div>
-	    	<br>
+		<!-- end q1 -->
+
+		<!-- q2 -->
+		<div class=" d-none d-sm-block col-md-4">
+			<!-- <div class="sales_info"></div>
+	    	<br> -->
 	    	<div class=" border-bottom">
-	    		<form>
-			    <select class="form-control">
-				  <option>Selection Option</option>
-				</select>
+		    	<form class=".d-none">
+				    <select class="form-control">
+					  <option>Selection Option</option>
+					</select>
+					<br>
+					<select class="form-control">
+					  <option>Select Number of People</option>
+					</select>
+					<br>
+					<div class="dotted-line"></div>
+					<br>
+					<button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
+					<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Give as a Gift </button>
+				</form>
 				<br>
-				<select class="form-control">
-				  <option>Select Number of People</option>
-				</select>
+	    		<div class="dotted-line"></div>
 				<br>
-				<div class="dotted-line"></div>
+				<p class="by "> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
 				<br>
-				<button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
-				<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Give as a Gift </button>
-			</form>
-			<br>
-	    	<div class="dotted-line"></div>
-			<br>
-			<br>
-			<div class="justify-content-center">
-				<p>Share This Deal</p>
-				<ion-icon size="large", name="logo-facebook"></ion-icon>
-				<ion-icon size="large", name="logo-twitter"></ion-icon>
-				<ion-icon size="large", name="mail"></ion-icon>
-				<ion-icon size="large", name="text"></ion-icon>
+				<div class="justify-content-center">
+					<p>Share This Deal</p>
+					<ion-icon size="large", name="logo-facebook"></ion-icon>
+					<ion-icon size="large", name="logo-twitter"></ion-icon>
+					<ion-icon size="large", name="mail"></ion-icon>
+					<ion-icon size="large", name="text"></ion-icon>
+				</div>
 			</div>
 		</div>
+		<!-- end q2 -->
 	</div>
+	
+	<!-- Visible on mobile only -->
+	<div class="row d-block d-sm-none">
+		<div class="container">
+			<div class=" border-bottom">
+		    	<form class=".d-none">
+				    <select class="form-control">
+					  <option>Selection Option</option>
+					</select>
+					<br>
+					<button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
+					<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Donate Cash </button>
+				</form>
+				<br>
+	    		<div class="dotted-line"></div>
+				<br>
+				<p class="by "> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+				<br>
+				<div class="justify-content-center">
+					<p>Share This Deal</p>
+					<ion-icon size="large", name="logo-facebook"></ion-icon>
+					<ion-icon size="large", name="logo-twitter"></ion-icon>
+					<ion-icon size="large", name="mail"></ion-icon>
+					<ion-icon size="large", name="text"></ion-icon>
+				</div>
+			</div>
 
-<!-- second row  section uses info -->
-	<div class="row ">
-		<div class="col-lg-8 text-center ">  	
-	    	<p class="lead EPabout mt-4" >Event Description: about</p><br>
-	    	<p class="">Event has ended</p>
-		    <div id="" >
-		        <li style="text-align:center; list-style: none; font-size: 16px;">Name: </li>
-		    </div>
-			<br>
-	    	<h3 class="center" id="comment_count"> Comments </h3>
-	    	<br>
-	    	<br>
-	    	<h4>Leave a Comment: </h4>
+			<!-- <button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
+			<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Give as a Gift </button> -->
 		</div>
+	</div>
+	
+	<div class="row d-block d-sm-none">
+		<div class="container">
+			<p class="EPabout mt-4" >Event Description: about</p><br>
+		</div>
+	</div>	
+
+	<!-- end  -->
+
+	<div class="row ">
+		<!-- q3 second row  section uses info -->
+		<div class="col-lg-8 text-center ">  	
+			<br>
+	    	<h3 class="center" id="comment_count"> Feed </h3>
+		</div>
+		<!-- end q3  -->
+
+		<!-- q4 -->
 		<div class="col-lg-4">
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -118,8 +148,10 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 		</div>
+		<!-- end q4 -->
 	</div>
+
 </div>
-</div>
+
 
 
