@@ -107,7 +107,9 @@
 				<br>
 	    		<div class="dotted-line"></div>
 				<br>
-				<p class="by "> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+				<% if @page.org.manager %>
+					<p class="by "> Invited by: <%= link_to @page.org.manager ,@page.org.manager, class: "by_link " %></p>
+				<% end %>
 				<br>
 				<div class="justify-content-center">
 					<p>Share This Deal</p>
