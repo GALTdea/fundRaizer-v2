@@ -26,14 +26,33 @@ hr.orange-br{
 }
 
 
+@media only screen and (max-width: 600px) {
+    .ev_name{
+        margin-bottom: 2px;
+        font-size: 1.25em;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        
+    }
 
-
-.ev_name{
-    margin-bottom: 2px;
-    font-size: 2em;
-    font-weight: 700;
-    font-family: 'Open Sans', sans-serif;
+ 
 }
+
+@media only screen and (min-width: 600px) {
+    .ev_name{
+        margin-bottom: 2px;
+        font-size: 2em;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        
+    }
+
+ 
+}
+
+
+
+
 
 .short_desc{
     font-size: 1em;

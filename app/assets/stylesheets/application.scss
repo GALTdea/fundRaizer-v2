@@ -6,8 +6,12 @@
 
 /*color themes*/
 
+.main-body{
+  margin-top: 74px !important ;
+}
+
 .smTopMargin {
-  height: 60px;
+  /*height: 60px;*/
 }
 
 /*break line*/
@@ -17,6 +21,12 @@
 }
 
 /*end*/
+
+
+.navbar-nav > .nav-item > a {
+    position: relative; 
+    }
+
 
 hr {
     margin-top: 1rem;
