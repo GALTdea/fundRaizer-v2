@@ -25,50 +25,81 @@ hr.orange-br{
     border-width: 3px;
 }
 
-
-@media only screen and (max-width: 600px) {
+/* Extra small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) {
     .ev_name{
         margin-bottom: 2px;
         font-size: 1.25em;
         font-weight: 700;
-        font-family: 'Open Sans', sans-serif;
-        
+        font-family: 'Open Sans', sans-serif;   
     }
 
+    .short_desc {
+        font-size: .75em;
+        color: rgb(114, 117, 120);
+        font-weight: 300;
+    }
  
 }
 
-@media only screen and (min-width: 600px) {
+/* Everyting outside tablets and above */
+@media only screen and (min-width: 577px) {
     .ev_name{
         margin-bottom: 2px;
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 700;
         font-family: 'Open Sans', sans-serif;
         
     }
 
+    .short_desc{
+        font-size: 1em;
+        color: rgb(114, 117, 120);
+        font-weight: 300;
+    }
  
 }
 
 
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {  }
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {  }
 
 
-
-.short_desc{
-    font-size: 1em;
-    color: rgb(114, 117, 120);
-    font-weight: 300;
-}
 
 .by{
-    font-size: 1em;
-    font-weight: 500;
-    margin-bottom: 2px;
-    color: #333;
+    
     
 }
 
+.by_info{
+    padding: 0px;
+    margin: 0px;
+}
 
+.by1{
+    padding: 0px;
+    margin: 0px;
+}
+.by2{
+    padding: 0px;
+    margin: 0px;
+}
+.by3{
+    padding: 0px;
+    margin: 0px;
+}
+
+.for{
+
+}
+
+
+.recent_s{
+
+}
 
 .by_link{
     color: #333 !important;
@@ -113,9 +144,14 @@ hr.orange-br{
   width: 100%;
 }
 
-
-.EPabout{
+.EPabout1{
     font-size: 1em;
+    padding: 1em;
+}
+
+.EPabout2{
+    font-size: 1em;
+    padding: 1em;
 }
 
 
