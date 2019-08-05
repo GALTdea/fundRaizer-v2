@@ -4,6 +4,18 @@
 @import 'gritter';
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
+@import "social-share-button";
+
+/*Social share button sizing*/
+$size: 36px;
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
+}
+
 /*color themes*/
 
 .main-body{
