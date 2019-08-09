@@ -64,7 +64,7 @@ Rails.application.routes.draw do
   # devise_for :businesses
 
 
-  devise_for :businesses, controllers: {
+  devise_for :businesses, path: 'businesses',  controllers: {
         sessions: 'businesses/sessions',
         registrations: "businesses/registrations",
         confirmations: "businesses/confirmations",
@@ -73,7 +73,7 @@ Rails.application.routes.draw do
 
       }
 
-  devise_for :orgs, controllers: {
+  devise_for :orgs, path: 'orgs', controllers: {
         sessions: 'orgs/sessions',
         registrations: "orgs/registrations",
         confirmations: "orgs/confirmations",

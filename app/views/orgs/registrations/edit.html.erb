@@ -19,7 +19,16 @@
         </div>
       </div>
     </div>
+    <br>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="field">
+              <%= f.label :Organizer %><br />
+              <%= f.text_field :manager, autofocus: false %>
+            </div>
+        </div>
+    </div>
     <br>
 
     <div class="row">
@@ -30,7 +39,6 @@
         </div>
       </div>
     </div>
-
     <br>
 
     <div class="row">
@@ -45,7 +53,6 @@
         <% end %>
       </div>
     </div>
-
     <br>
 
     <div class="row">
@@ -61,12 +68,11 @@
       </div>
       <div class="col-md-6">
         <div class="field">
-          <%= f.label :password_confirmation %><br />
+          <%= f.label :password_confirmation %><small>(leave blank if you don't want to change it)</small>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
         </div>
       </div>
     </div>
-
     <br>
 
     <div class="row">
@@ -76,10 +82,11 @@
           <%= f.password_field :current_password, autocomplete: "off" %>
         </div>
       </div>
+      
     </div>
-
     <br>
-    <!-- <div class="row">
+
+     <div class="row">
         <div class="col-md-4">
           <div>
             <%= f.file_field :business_image  %>
@@ -87,9 +94,16 @@
         </div>
     </div>
     <br>
-    <div class="actions">
-      <%#= f.submit "Update", class: 'btn btn-info' %>
-    </div> -->
+    <br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="actions">
+          <%= f.submit "Update", class: 'btn btn-info' %>
+        </div> 
+      </div>
+    </div>
+    
   <% end %>
 
   <br>

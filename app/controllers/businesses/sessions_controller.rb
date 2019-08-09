@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
 class Businesses::SessionsController < Devise::SessionsController
-  include Accessible
-  skip_before_action :check_user, only: :destroy
+  # include Accessible
+  # skip_before_action :check_user, only: :destroy
+  # after_action :redirect_instructions, only: :destroy
 
   
   # skip_before_action :verify_signed_out_user
@@ -21,10 +22,23 @@ class Businesses::SessionsController < Devise::SessionsController
   #   super
   # end
 
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+   # DELETE /resource/sign_out
+    def destroy
+      signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+    
+      redirect_to root_path
+      
+
+      set_flash_message! :notice, :signed_out if signed_out
+
+      yield if block_given?
+      root_path
+   end
+
+   # def redirect_instructions
+   #  redirect_to request.referrer
+   # end
+
 
   # protected
 
@@ -36,11 +50,9 @@ class Businesses::SessionsController < Devise::SessionsController
 private 
 
    # Overwriting the sign_out redirect path method
-  # def after_sign_out_path_for
-    
-  #     root_path
-    
-  # end
+  
+
+  
 
 
   # def after_sign_out_path_for(resource_or_scope)

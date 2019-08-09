@@ -12,5 +12,9 @@ class Org < ApplicationRecord
   has_many :events, dependent: :destroy
   has_many :businesses, through: :events
 
+  has_many :pages, dependent: :destroy
+
+  has_one :event_pages, through: :events
+
 
 end

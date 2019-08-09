@@ -45,8 +45,7 @@ gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'tether-rails', '~> 1.4'
 
-gem 'devise', '~> 4.4', '>= 4.4.1'
-
+gem 'devise', '~> 4.6', '>= 4.6.2'
 # image loader and rezisors
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'carrierwave-aws', '~> 1.3'
@@ -67,7 +66,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 
 #facebook integration 
 
-gem 'omniauth-facebook', '~> 5.0'
+# gem 'omniauth-facebook', '~> 5.0'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.1'
 
 # icons library
@@ -94,6 +93,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  gem 'pry-rails', '~> 0.3.9'
+  gem 'pry-nav', '~> 0.3.0'
+
+  gem 'better_errors', '~> 2.5', '>= 2.5.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

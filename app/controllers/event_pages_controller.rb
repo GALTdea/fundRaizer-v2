@@ -7,6 +7,7 @@ class EventPagesController < ApplicationController
 
   def show
   	@page = EventPage.find(params[:id])
+    @organizer = @page.org.manager
   end
 
   # def edit
@@ -16,6 +17,9 @@ class EventPagesController < ApplicationController
   def update
   	@event_page = EventPage.find(params[:id])
   	if @event_page.update_attributes(event_page_params)
+
+      DealInviteMailer.send_deal_email(@org).deliver
+
   		redirect_to event_page_path(@event_page)
   	end
   end

@@ -1,24 +1,5 @@
-<!-- <div class="container">
-  <%# provide(:title, @page.name) %> 
-<div class="container">
-	<div class="header-row" id="header-row" style="padding: 0px; overflow:hidden; height:100px;">
-		<div class="container-fluid" style="padding: 0px;">
-			<div class="row"> 
-			    <div class="col-xs-12"> 
-			        <a class="navbar-brand logo" href="index.html">
-				         place your image here -->
-			           <!-- <img src="http://placekitten.com/g/1200/600" alt="company logo" style="width: 100%;">
-			        </a> 
-			    </div>     
-			</div>
-		</div>
-    </div>
-</div> -->
-
-<br>
 <div class="container">
 	<div class="row">
-
 		<!-- q1 -->
 		<div class="col-lg-8">
 	    	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -50,7 +31,7 @@
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
-			<h1  class=" ev_name mt-2  "> Event Name </h1>
+			<h1  class=" ev_name mt-2  "> <%= @page.event_name %> </h1>
 	    	<h5 class="short_desc"> <ion-icon name="pricetag"></ion-icon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	        </h5>
 			<p class=" d-none d-sm-block lead EPabout mt-4" >Event Description: about</p><br>
@@ -83,7 +64,7 @@
 
 			<div class="by">
 				<div class="by_info ml-1 mt-2">
-					<p class="by1">Gustavo Valenzuela <ion-icon name="mail"></ion-icon></p>
+					<p class="by1"><%= @organizer %> <ion-icon name="mail"></ion-icon></p>
 					<p class="by2"><ion-icon name="pricetag"> </ion-icon>   Charity</p>
 					<p class="by3"><ion-icon name="pin"></ion-icon>   Torrance, CA</p>
 				</div>

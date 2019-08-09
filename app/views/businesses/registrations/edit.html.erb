@@ -46,12 +46,12 @@
     </div>
 
     <br>
-
+    
     <div class="row">
       <div class="col-md-6">
         <div class="field">
-          <%= f.label :password %> <small>(leave blank if you don't want to change it)</small><br />
-          <%= f.password_field :password, autocomplete: "off" %>
+          <%= f.label :password %> <small>(leave blank if you don't want to change it)</small>
+          <%= f.password_field :password, autocomplete: "on" %>
           <% if @minimum_password_length %>
             <br />
             <small><%= @minimum_password_length %> characters minimum</small>
@@ -60,8 +60,8 @@
       </div>
       <div class="col-md-6">
         <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+          <%= f.label :password_confirmation %> <small>(leave blank if you don't want to change it)</small>
+          <%= f.password_field :password, autocomplete: "off" %>
         </div>
       </div>
     </div>
@@ -69,14 +69,19 @@
     <br>
 
     <div class="row">
+      
+
       <div class="col-md-6">
         <div class="field">
-          <%= f.label :current_password %> <small>(we need your current password to confirm your changes)</small><br />
-          <%= f.password_field :current_password, autocomplete: "off" %>
+          <%= f.label :current_password %><small>(we need your current password to confirm your changes)</small>
+          <%= f.password_field :current_password%>
         </div>
       </div>
     </div>
 
+    <br>
+    <br>
+    <br>
     <br>
     <div class="row">
         <div class="col-md-4">

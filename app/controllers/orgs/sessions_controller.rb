@@ -2,8 +2,9 @@
 
 class Orgs::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
-  include Accessible
-  skip_before_action :check_user, only: :destroy
+   
+   # include Accessible
+  # skip_before_action :check_user, only: :destroy
   
 
   # GET /resource/sign_in
@@ -17,14 +18,29 @@ class Orgs::SessionsController < Devise::SessionsController
   # end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  def destroy
+    
+    signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+    
+    redirect_to root_path
+    
 
-  # protected
+    set_flash_message! :notice, :signed_out if signed_out
+
+    yield if block_given?
+    root_path
+  end
+
+  protected
+
+  
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_in_params
   #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
   # end
+  
 end
+ 
+
+ 

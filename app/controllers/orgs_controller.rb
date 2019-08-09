@@ -25,7 +25,6 @@ class OrgsController < ApplicationController
     if current_org != Org.find(params[:id])
       redirect_to root_path, notice: "Wrong profile page"
     end
-
   end
 
 end

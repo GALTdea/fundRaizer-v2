@@ -8,7 +8,7 @@ class EventsController < ApplicationController
   end
 
   def show
-     @event = Event.find(params[:id])
+     @event = Event.find_by(slug: params[:id])
   end
 
   def new
@@ -57,6 +57,8 @@ class EventsController < ApplicationController
                          date_end: '01/02/03',
                          about: '..'
                          )
+        
+
         flash[:success] = "Event Was accepted"
         if current_business
          redirect_to business_events_path(current_business)

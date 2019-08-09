@@ -5,15 +5,25 @@ class ApplicationController < ActionController::Base
   require 'business_sanitizer'
   require 'org_sanitizer'
 
-  
-
-
+ 
 
   
 
  
 
 private
+
+ # Overwriting the sign_out redirect path method
+
+  def after_sign_out_path_for(resource_or_scope)
+    if resource_or_scope == :business
+      root_path
+    elsif resource_or_scope == :org
+      root_path
+    else
+      pages_ourcause_path
+    end
+  end
 
 
 
@@ -26,18 +36,6 @@ private
       super # Use the default one
     end
   end
-
-
-# def after_sign_out_path_for(resource_or_scope)
-#     if resource_or_scope == :org
-#        root_path
-#     elsif resource_or_scope == :business
-#       root_path
-#     else
-#       root_path
-#     end
-#   end
-
 
 
 
