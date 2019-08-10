@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class Businesses::SessionsController < Devise::SessionsController
-  # include Accessible
-  # skip_before_action :check_user, only: :destroy
-  # after_action :redirect_instructions, only: :destroy
+  include Accessible
+  skip_before_action :check_user, only: :destroy
+  
 
   
   # skip_before_action :verify_signed_out_user
@@ -35,10 +35,7 @@ class Businesses::SessionsController < Devise::SessionsController
       root_path
    end
 
-   # def redirect_instructions
-   #  redirect_to request.referrer
-   # end
-
+   
 
   # protected
 
@@ -54,16 +51,6 @@ private
 
   
 
-
-  # def after_sign_out_path_for(resource_or_scope)
-  #   if resource_or_scope == :business
-  #     new_business_session_path
-  #   elsif resource_or_scope == :org
-  #     new_org_session_path
-  #   else
-  #     root_path
-  #   end
-  # end  
 
 
   def verify_signed_out_user
