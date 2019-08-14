@@ -6,12 +6,30 @@ class ApplicationController < ActionController::Base
   require 'org_sanitizer'
 
  
+  def new
+    @waitlist = Waitlist.new
+  end
+
+  def create
+    @waitlist = Waitlist.create(waitlist_params)
+
+    if @waitlist.save
+      redirect_to root_path
+      # Tell the ProspectMailer to send an email to us
+      # WaitlistMailer.waitlist_email(@waitlist).deliver
+    end
+  end
 
   
 
  
 
 private
+
+  def waitlist_params 
+    params.require(:waitlist).permit(:email, :name, :sponsor, :supporter)
+  end 
+
 
  # Overwriting the sign_out redirect path method
 

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :waitlists
+
   # get 'sponsors/index'
 
   # get 'sponsors/show'

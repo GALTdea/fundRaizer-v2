@@ -1,0 +1,69 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container border">
+	<div class="row">
+		<!-- <div class="col-md-2"></div> -->
+		<div class="col-md-10">
+			<%= form_for @waitlist do |f| -%>	
+			<div class="">
+	        	<div class="">
+					<%= f.label :email, class:'' %>
+				</div>				
+	        	<div class="">
+					<%= f.text_field :waitlist, autofocus: true,class:"form-control form-control-lg", placeholder:"200 students with partents" %>
+				</div>
+			</div>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :name, class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :name,class:"form-control form-control-lg", placeholder:"reach" %>
+				</div>
+			</div>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :sponsor, class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :sponsor,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :fundraiser, class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :fundraiser,class:"form-control form-control-lg", placeholder:"amount_goal" %>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="">
+						<%= f.label :supporter, class:"" %>
+					</div>
+		        	<div class="">
+						<%= f.date_field :supporter,class:"form-control form-control-lg", placeholder:"date" %>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="actions form-row form-group">
+				<div class="col">
+				  <%= f.submit "Submit", class:'btn btn-block btn-success btn-lg' %>
+				</div>
+			</div>
+			<% end -%>	
+		</div>
+		
+	</div>
+</div>
+
