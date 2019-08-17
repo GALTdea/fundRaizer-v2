@@ -31,7 +31,7 @@
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
-			<h1  class=" ev_name mt-2  "> <%= @page.event_name %> </h1>
+			<h1  class=" ev_name mt-2"> <%= @page.event_name %> </h1>
 	    	<h5 class="short_desc"> <ion-icon name="pricetag"></ion-icon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	        </h5>
 	        <div class=" d-none d-sm-block lead EPabout mt-4">
@@ -71,7 +71,9 @@
 
 			<div class="by">
 				<div class="by_info ml-1 mt-2">
-					<p class="by1"> Organized By:<%= @organizer %> <ion-icon name="mail"></ion-icon></p>
+					<% if @organizer.present? %>
+						<p class="by1"> Organized By:<%= @organizer %> <ion-icon name="mail"></ion-icon></p>
+					<% end %>
 					<p class="by2"><ion-icon name="pricetag"> </ion-icon>   Charity</p>
 					<p class="by3"><ion-icon name="pin"></ion-icon>   Torrance, CA</p>
 				</div>
