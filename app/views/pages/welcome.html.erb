@@ -1,10 +1,29 @@
 
 <!-- <br class="d-none .d-sm-block .d-md-none"> -->
 <!-- <div class="row .d-none .d-sm-block .d-md-none smTopMargin"></div> -->
-<div class="alert alert-dark text-center header-msg0" role="alert">
-  Find the right sponsor and launch a fundraising campaign in minutes!
-</div>
 
+<div class="alert alert-secondary alert-cust mt-n1" role="alert">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col-md-6">
+          <span class="float-right d-flex h-100 align-items-center">
+          Join FundRaisable Waitlist</span>
+        </div>
+        <div class="col-md-6">
+          <%= form_for(Waitlist.new, :url => waitlists_path) do |f| %>
+                <div class="form-inline"> 
+                  <%= f.email_field :email, type:"email" , class:"form-control form-control-lg frm-cust", placeholder:"EMAIL ADDRESS" %> 
+                  <%= f.submit "Submit", class:'btn btn-primary ml-2 ' %> 
+                  
+                </div>
+          <% end %>
+        </div>
+      </div>   
+    </div>
+  </div>
+</div>
 <div style="background: white !important", class="jumbotron welcome-header font3">
   <div class="container ">
     <div class="row">
@@ -23,10 +42,11 @@
         </div>
         <% if business_signed_in? or org_signed_in? %>
         <% else %>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <%= link_to "Start a Campaign", new_org_registration_path, class:"btn btn-lg btn-primary btn-grenish " %>
-         </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <%#= link_to "Start a Campaign", new_org_registration_path, 'data-toggle':'modal', '#exampleModal': "#popupnum" , class:"btn btn-lg btn-primary btn-grenish" %>
+              <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-primary btn-grenish "> Start a Campaign</button>
+            </div>
           </div> 
         <% end %>
       </div>
@@ -39,11 +59,41 @@
 </div>
 <!-- End Jumbotron -->
 
+<!-- waiting list modal -->
+<!-- Button trigger modal -->
 
+<!-- Modal -->
+  <!-- Button trigger modal -->
+<!-- Waitlist Modal  -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end waiting list modal -->
 
 <!-- Product story  -->
 <section class="p-story">
-  <div class="container  d-flex justify-content-center text-center  " >
+  <div class="container justify-content-center text-center  " >
+    
+      <h4 class="font4">
+        Find the right sponsor and launch a fundraising campaign in minutes!
+      </h4>
+    
     <!-- Three columns of text below the carousel -->
     <div class="row story-row pt-5" >
       <div class="col-lg-4 ">
@@ -68,7 +118,6 @@
   </div>
 </section>
 <!-- End Product story  -->
-
 
 <!-- Feature businesses  -->
 <main class="feat-bus">

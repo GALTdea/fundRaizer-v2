@@ -16,6 +16,66 @@ $size: 36px;
   }
 }
 
+/*Fonts */
+
+.font1{
+  font-family: 'Roboto', sans-serif;
+}
+
+.font2{
+  font-family: 'Oswald', sans-serif;
+  font-size: 56px;
+}
+
+
+.font3{
+  font-family: 'Merriweather', serif;
+  /*font-size: 22px;*/
+}
+
+.font4{
+  font-family: 'Varela Round', sans-serif;
+  /*font-size: 22px;*/
+}
+
+/*End Fonts */
+
+
+
+
+
+body{
+  background-color: red;
+}
+
+.wlc{
+  background-color: red !important;
+}
+
+/* Waitlist Card*/
+
+.waitlist-card{
+  background-color: rgba(255,255,255, 0.3) !important;
+}
+
+.frm-cust{
+  width: 70% !important;
+  height: 100% !important;
+  /*background-color: #e9eef5 !important;*/
+  font-weight: 200;
+}
+
+.alert-cust{
+  padding: 0rem !important;
+  margin-bottom: 0rem !important;
+  /*background-color:#e9eef5 !important;*/
+  background-color: #fff;
+}
+
+/* End Waitlist Card*/
+
+
+
 /*color themes*/
 
 .main-body{
@@ -146,20 +206,7 @@ hr.new1 {
 
 /*end navbar themening*/
 
-.font1{
-  font-family: 'Roboto', sans-serif;
-}
 
-.font2{
-  font-family: 'Oswald', sans-serif;
-  font-size: 56px;
-}
-
-
-.font3{
-  font-family: 'Merriweather', serif;
-  /*font-size: 22px;*/
-}
 
 /*.nav-bg-color{
   border-color: #e7e7e7;

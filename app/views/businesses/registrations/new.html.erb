@@ -11,10 +11,9 @@
 
 <br>
 <!-- waitling list -->
-<div class="container">
+<div class="container  wlc">
   <div class="row">
     <div class="col-md-12">
-      
       <%= form_for(Waitlist.new, :url => waitlists_path) do |f| %>
           <div class="form-group">
             <!-- <label for="exampleInputEmail1">Email address</label> -->   
@@ -48,7 +47,12 @@
 </div>
 <!-- end waitling list -->
 
-
+<%= form_for(Waitlist.new, :url => waitlists_path) do |f| %>
+                <div class=""> 
+                  <%= f.email_field :email, type:"email" ,class:"form-control form-control-lg frm-cust", placeholder:"EMAIL ADDRESS" %> <%= f.submit "Submit", class:'btn btn-primary' %> 
+                </div>
+                <%#= f.submit "Submit", class:'btn btn-primary' %>           
+<% end %>
 
 <div class="cotainer sign-up-stile team" >
   <br>
