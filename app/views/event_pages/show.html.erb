@@ -71,9 +71,9 @@
 
 			<div class="by">
 				<div class="by_info ml-1 mt-2">
-					<% if @organizer.present? %>
-						<p class="by1"> Organized By:<%= @organizer %> <ion-icon name="mail"></ion-icon></p>
-					<% end %>
+					<%# if @organizer.present? == false %>
+						<p class="by1"> Organized By:<%#= @organizer %> <ion-icon name="mail"></ion-icon></p>
+					<%# end %>
 					<p class="by2"><ion-icon name="pricetag"> </ion-icon>   Charity</p>
 					<p class="by3"><ion-icon name="pin"></ion-icon>   Torrance, CA</p>
 				</div>

@@ -7,7 +7,7 @@ class EventPagesController < ApplicationController
 
   def show
   	@page = EventPage.find(params[:id])
-    @organizer = @page.org.manager
+    # @organizer = @page.org.manager
   end
 
   # def edit
