@@ -11,15 +11,19 @@
 			  <div class="carousel-inner">
 			    <div class="carousel-item active">
 			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
-			      <%= image_tag("event_image.png", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			      <%= image_tag("HopeCampPage.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
 			    </div>
 			    <div class="carousel-item">
 			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
-			      <%= image_tag("event_image.png", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			      <%= image_tag("JMCampaign.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
 			    </div>
 			    <div class="carousel-item">
 			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
-			      <%= image_tag("event_image.png", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			      <%= image_tag("WagCampaign2.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			    </div>
+			    <div class="carousel-item">
+			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
+			      <%= image_tag("ritualCampaign1.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
 			    </div>
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -31,16 +35,12 @@
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div>
-			<h1  class=" ev_name mt-2"> <%= @page.event_name %> </h1>
-	    	<h5 class="short_desc"> <ion-icon name="pricetag"></ion-icon> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			<h1  class=" ev_name mt-2"> <%#= @page.event_name %> Sihanouk Hospital Center of Hope </h1>
+	    	<h5 class="short_desc"> <ion-icon name="pricetag"></ion-icon> Our Awesome Sponsors Joymode, Parachute, Ritual, will donate 50% of any sales on our platform
+
 	        </h5>
 	        <div class=" d-none d-sm-block lead EPabout mt-4">
-				<p class=" d-none d-sm-block lead EPabout mt-4" >Event Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+				<p class=" d-none d-sm-block lead EPabout mt-4" >Since 2008, Sihanouk Hospital Center of HOPE has partnered with AmeriCares and AstraZeneca to deliver the country’s only comprehensive program that provides preventative education, screening services such as digital mammography and breast ultrasounds and treatment often mastectomies combined with donated medication to treat hormone receptor positive women.</p><br>
 			</div>
 		</div>
 		<!-- end q1 -->
@@ -52,20 +52,40 @@
 	    	<div class=" border-bottom">
 		    	<form class=".d-none">
 				    <select class="form-control">
-					  <option>Selection Option</option>
+					  <option>$50 Gift Certificate</option>
+					  <option>$50 Gift Certificate</option>
+					  <option>$50 Gift Certificate</option>
 					</select>
 					<br>
 					<div class="dotted-line"></div>
 					<br>
 					<button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
-					<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Donate Cash </button>
+					<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn ">Donate Cash 
+					</button>
 				</form>
 				<br>
 	    		<div class="dotted-line"></div>
 				<br>
 				<div class="text-center">
-					<p>Share This Deal</p>
+					<p class="share_deal">Share This Deal</p>
 					<%= social_share_button_tag(@page.event_name) %>
+				</div>
+				<div class="dotted-line"></div>
+				<div class="virality">
+					
+				</div>
+				<div class="dotted-line">
+					<ul id="list-unstyled">
+						<li>
+							<span class="text-stat">2k</span>
+							<span>Supporters</span>
+						</li>
+							<br>
+						 <li>
+							<span class="text-stat">300 </span> 
+							<span>Shares </span>
+						</li>
+					</ul>
 				</div>
 			</div>
 
