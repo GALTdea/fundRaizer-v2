@@ -32,10 +32,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    
-  
   </head>
-
   <body class="main-body">
            <%= alerts %>
           <% unless controller_name == "event_pages" && action_name == "show" %>
@@ -53,5 +50,6 @@
           <% end %>
         <%= yield %>
         <%= render "shared/footer" %>
+        <%= render "shared/waitlist2" %>
   </body>
 </html>
