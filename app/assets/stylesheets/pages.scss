@@ -17,8 +17,21 @@
     color: rgb(72,72,72);
 }
 
-/* Welcome Header */
+/*/////////// WeLCOME PAGE ////////////////      */
 
+.wLSignUp{
+    width: 30%;
+}
+
+/*Waitlist signup*/
+.btn-primary1 {
+    color: #fff;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    font-size: .6em !important
+}
+
+/* Welcome Header */
 .header-msg0{
     font-size: 1.2em;
     font-family: 'Varela Round', sans-serif;
@@ -51,8 +64,6 @@
 
 .welcome-header{
 	/*background-image: linear-gradient(#f8fcfb, #e8f4f0);*/
-    
-
 }
 
 
@@ -86,6 +97,17 @@
 
 }
 
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media only screen and (max-width: 576px) {
+    .ev_name{
+        margin-bottom: 2px;
+        font-size: 1.25em;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;   
+    }
+ 
+}
 /*@media (min-width: 576px)*/
 .jumbotron {
     /*margin-bottom: 0rem;*/
