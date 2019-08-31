@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users
+  resources :campaign_pages
   resources :waitlists
 
   # get 'sponsors/index'

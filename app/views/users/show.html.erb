@@ -1,0 +1,85 @@
+<br>
+<br>
+<br>
+<div class="container oBody">
+    <div class="row card">
+        <div class="col-xs-12 col-sm-6 col-md-6 ">
+            <div class="well well-sm ">
+                <div class="row ">
+                    <div class="col-sm-6 col-md-4 p-3">
+                         <img src="http://placehold.it/180x190" alt="" class="img-rounded img-responsive" />
+                    </div>
+                    <div class="col-sm-6 col-md-8">
+                        <h4><%#= @org.name  %></h4>
+                        <p><%#= @org.manager %></p>
+                        <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                        </i></cite></small>
+                        <p>
+                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                            <br />
+                            <i class="glyphicon glyphicon-globe"></i><a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+                            <br />
+                            <i class="glyphicon glyphicon-gift"></i>June 02, 1988
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="container ">
+    <p>Completing an event proposal will alert potential sponsors allowing them to bid for your business. Browse through the proposals and pick the sponsor that best meets your needs. 
+    </p>
+    <!-- 	<h5> Info:</h5>	
+    	<div class="row profileTop">
+    		<div class="leftDiv">
+    			<p> Organization:<br> <%#= @org.name %> </p> <br>
+    			<p> Manager: <br> <%#= @org.manager %> </p> <br>	
+    		</div>
+    	</div>
+     -->
+     	<br>
+    <h5> Campaings :</h5>
+    <% @campaings.each do |f| %>
+        <div class="">
+        	<div class="row eventCard ">
+        		<div class="col-md-3 border-right">
+        		  <p class="m-b0" >Title: <%= f.title %></p>
+                  
+                  <p class="m-b0"> Sponsor: <%#= link_to f.business.name, business_path(f.business)%> <%#= f.business.id %> </p>   
+                  <p class="m-b0">  <%= link_to "edit",  edit_campaign_page_path(f) %> </p>   
+                  <p class="m-b0">  <%= link_to "show",  campaign_page_path(f) %> </p>   
+        		</div>
+
+        		<div class="col-md-7 border-right">
+        			<%#= link_to f.business.name, business_path(f.business)   %>
+        		</div>
+
+                <div class="col-md-2">
+                    <%# if org_signed_in? %>
+                        <%# if !f.org_active %>
+                            <%#= link_to "Accept Event", confirmation_event_path( f , event: { org_active: true } ), method: :put %>
+                        <%# else %>
+                            <%#= link_to "Cancell Event", confirmation_event_path( f , event: { org_active: false } ), method: :put %>
+                        <%#end %>
+                    <%# end %>
+                    <p>Contact sponsor</p>
+                </div>
+        	</div>
+        </div>
+    <% end %>
+
+</div>
+
+
+<%# @event_pages.each do |f| %>
+ <%#= link_to f.event_name, event_page_path(f) %>  <%#= link_to "edit", edit_event_page_path(f) %> <br>
+<%# end %>
+
+
+
+<%#= link_to "Delete", room_path(room, room: {name: nil, address: nil}) , method: :put, data: { confirm: "You sure?"} %>
+

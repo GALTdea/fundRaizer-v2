@@ -1,0 +1,194 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			
+		</div>
+		<div class="col-md-2"></div>
+	</div>
+	<div class="row">
+		<!-- q1 -->
+		<div class="col-lg-8">
+	    	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			  <ol class="carousel-indicators">
+			    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			  </ol>
+			  <div class="carousel-inner">
+			  	<div class="carousel-item active">
+			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
+			      <%= image_tag("HSFootball.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			    </div>
+			    <div class="carousel-item">
+			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
+			      <%= image_tag("JMCampaign.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			    </div>
+			    <div class="carousel-item">
+			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
+			      <%= image_tag("WagCampaign2.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			    </div>
+			    <div class="carousel-item">
+			      <!-- <img src="..." class="d-block w-100" alt="..."> -->
+			      <%= image_tag("ritualCampaign1.jpg", :alt => "rss feed", class:"img-fluid d-block w-100 ", id: "") %>
+			    </div>
+			  </div>
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+			<h1  class=" ev_name mt-2"> <%= @campaign_page.title %></h1>
+	    	<h5 class="short_desc"> <ion-icon name="pricetag"></ion-icon> <%= @campaign_page.deal_info %> </h5>
+	        <div class=" d-none d-sm-block lead EPabout mt-4">
+				<p class=" d-none d-sm-block lead EPabout mt-4"> <%= @campaign_page.story %>  </p><br>
+			</div>
+		</div>
+		<!-- end q1 -->
+
+		<!-- q2 -->
+		<div class=" d-none d-sm-block col-md-4">
+			<!-- <div class="sales_info"></div>
+	    	<br> -->
+	    	<div class=" border-bottom">
+		    	<form class=".d-none mt-1">
+				    <select class="form-control">
+					  <option><%= @campaign_page.deal_1 %> </option>
+					  <option><%= @campaign_page.deal_2 %></option>
+					  <option><%= @campaign_page.deal_3 %></option>
+					  <option><%= @campaign_page.deal_4 %></option>
+					</select>
+					<br>
+					<div class="dotted-line"></div>
+					<br>
+					<button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
+					<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn ">Donate Cash 
+					</button>
+				</form>
+				<br>
+	    		<div class="dotted-line"></div>
+				<br>
+				<div class="text-center">
+					<p class="share_deal">Share This Deal</p>
+					<%= social_share_button_tag(@campaign_page.title) %>
+				</div>
+				<div class="dotted-line"></div>
+				<div class="virality">
+					
+				</div>
+				<div class="dotted-line">
+					<ul id="list-unstyled">
+						<li>
+							<span class="text-stat">2k</span>
+							<span>Supporters</span>
+						</li>
+							<br>
+						 <li>
+							<span class="text-stat">300 </span> 
+							<span>Shares </span>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="by">
+				<div class="by_info ml-1 mt-2">
+					<%# if @organizer.present? == false %>
+						<p class="by1"> Organized By:<%= @campaign_page.organized_by %> <ion-icon name="mail"></ion-icon></p>
+					<%# end %>
+					<p class="by2"><ion-icon name="pricetag"> </ion-icon>   Charity</p>
+					<p class="by3"><ion-icon name="pin"></ion-icon>   Torrance, CA</p>
+				</div>
+			</div>
+
+			<div class="for mt-5 ">
+				<div class="for mt-3 ">Funds raised will benefit:</div>
+				<div class="dotted-line mt-0"></div>
+				<div class="for_details">
+					<div class="for_details mt-2"><%= @campaign_page.in_bene_of %></div>
+				</div>
+			</div>
+			
+
+			<div class="recent_s mt-5">
+				<div class="recent_s1 mb-2 border-bottom">Recent Donors</div>
+			</div>
+		</div>
+		<!-- end q2 -->
+	</div>
+	
+<!-- Visible on mobile only -->
+	<div class="row d-block d-sm-none">
+		<div class="container">
+			<div class=" border-bottom">
+		    	<form class=".d-none">
+				    <select class="form-control">
+					  <select class="form-control">
+					  <option><%= @campaign_page.deal_1 %> </option>
+					  <option><%= @campaign_page.deal_2 %></option>
+					  <option><%= @campaign_page.deal_3 %></option>
+					  <option><%= @campaign_page.deal_4 %></option>
+					</select>
+					</select>
+					<br>
+					<button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
+					<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Donate Cash </button>
+				</form>
+				<br>
+	    		<div class="dotted-line"></div>
+				<div class="text-center">
+					<p>Share This Deal</p>
+					<%= social_share_button_tag(@campaign_page.title) %>
+				</div>
+			</div>
+
+			<!-- <button type="button" class="btn  btn-lg btn-block btn-success"> Buy </button>
+			<button type="button" class="btn btn-outline-secondary btn-lg btn-block mt-2 custom-btn "> Give as a Gift </button> -->
+		</div>
+	</div>
+	
+	<div class="row d-block d-sm-none">
+		<div class="container">
+			<div class="row EPabout2">
+				<div class="for ">
+				<div class="for mt-3">Funds raised will benefit:</div>
+				<div class="dotted-line mt-1"></div>
+				<div class="for_details">
+					<div class="for_details mt-3"><%= @campaign_page.in_bene_of %></div>
+				</div>
+			</div>
+
+			</div>
+			<div class="row">
+				<p class="EPabout2 mt-4" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, placeat. Non dignissimos exercitationem blanditiis beatae quidem amet accusantium reprehenderit quo nobis nostrum, illo nulla quia magnam debitis possimus, in dicta.
+				</p>
+			</div>
+			<br>
+		</div>
+	</div>	
+
+<!-- end  -->
+
+	<div class="row ">
+		<!-- q3 second row  section uses info -->
+		<div class="col-lg-8 text-center ">  	
+			<br>
+	    	<h5 class="center" id="comment_count"> Feed? </h5>
+		</div>
+		<!-- end q3  -->
+
+		<!-- q4 -->
+		<div class="col-lg-4">
+			
+		</div>
+		<!-- end q4 -->
+	</div>
+
+</div>
+
+
+

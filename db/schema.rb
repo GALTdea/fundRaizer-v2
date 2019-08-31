@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190810224519) do
+ActiveRecord::Schema.define(version: 20190828033333) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,26 @@ ActiveRecord::Schema.define(version: 20190810224519) do
     t.index ["email"], name: "index_businesses_on_email", unique: true
     t.index ["reset_password_token"], name: "index_businesses_on_reset_password_token", unique: true
     t.index ["slug"], name: "index_businesses_on_slug", unique: true
+  end
+
+  create_table "campaign_pages", force: :cascade do |t|
+    t.string "title"
+    t.string "organized_by"
+    t.text "deal_info"
+    t.string "in_bene_of"
+    t.text "story"
+    t.string "deal_1"
+    t.string "deal_2"
+    t.string "deal_3"
+    t.string "deal_4"
+    t.string "deal_5"
+    t.string "organizer_address"
+    t.integer "deals_sold"
+    t.string "buyers"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_campaign_pages_on_user_id"
   end
 
   create_table "event_pages", force: :cascade do |t|
@@ -181,6 +201,7 @@ ActiveRecord::Schema.define(version: 20190810224519) do
 
   add_foreign_key "bids", "businesses"
   add_foreign_key "bids", "proposals"
+  add_foreign_key "campaign_pages", "users"
   add_foreign_key "event_pages", "businesses"
   add_foreign_key "event_pages", "events"
   add_foreign_key "event_pages", "orgs"

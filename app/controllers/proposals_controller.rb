@@ -7,6 +7,10 @@ class ProposalsController < ApplicationController
   end
 
   def edit
+    
+  end
+
+  def upgrade
   end
 
   def new

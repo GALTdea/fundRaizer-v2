@@ -1,0 +1,145 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container border">
+	<div class="row">
+		<!-- <div class="col-md-2"></div> -->
+		<div class="col-md-10">
+			<%= form_for @campaign_page do |f| -%>	
+			<div class="">
+	        	<div class="">
+					<%= f.label :title, class:'' %>
+				</div>				
+	        	<div class="">
+					<%= f.text_field :title, autofocus: true,class:"form-control form-control-lg", placeholder:"200 students with partents" %>
+				</div>
+			</div>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :organized_by, class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :organized_by,class:"form-control form-control-lg", placeholder:"reach" %>
+				</div>
+			</div>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :deal_info , class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :deal_info,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :in_bene_of, class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :in_bene_of,class:"form-control form-control-lg", placeholder:"amount_goal" %>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="">
+						<%= f.label :story, class:"" %>
+					</div>
+		        	<div class="">
+						<%= f.text_field :story,class:"form-control form-control-lg", placeholder:"date" %>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="">
+						<%= f.label :deal_1, class:"" %>
+					</div>
+		        	<div class="">
+						<%= f.date_field :deal_1,class:"form-control form-control-lg", placeholder:"date" %>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="">
+						<%= f.label :deal_2, class:"" %>
+					</div>
+		        	<div class="">
+						<%= f.date_field :deal_2,class:"form-control form-control-lg", placeholder:"date" %>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :deal_3 , class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :deal_3,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :deal_4 , class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :deal_4,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :deal_5 , class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :deal_5,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :deal_5 , class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :deal_5,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="">
+				<div class="">
+					<%= f.label :organizer_address , class:"" %>
+				</div>
+	        	<div class="">
+					<%= f.text_field :organizer_address,class:"form-control form-control-lg", placeholder:"location" %>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="actions form-row form-group">
+				<div class="col">
+				  <%= f.submit "Submit", class:'btn btn-block btn-success btn-lg' %>
+				</div>
+			</div>
+			<% end -%>	
+		</div>
+		
+	</div>
+</div>
