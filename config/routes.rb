@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :campaign_pages
   resources :waitlists
 
+
   # get 'sponsors/index'
 
   # get 'sponsors/show'
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :sponsors
 
-  devise_for :users
+  # devise_for :users
   
   root to: "pages#welcome"
   
@@ -85,6 +86,16 @@ Rails.application.routes.draw do
         unlocks: "orgs/unlocks",
 
       }
+
+
+  devise_for :users, path: 'users', controllers: {
+        sessions: 'users/sessions',
+        registrations: "users/registrations",
+        confirmations: "users/confirmations",
+        passwords: "users/passwords",
+        unlocks: "users/unlocks",
+
+  }
 
 
 

@@ -9,13 +9,9 @@ class UsersController < ApplicationController
     @campaings = @user.campaign_pages
   end
 
-  def new
-  	@user = User.new
-  end
+  
 
-  def create
-  	@user = User.create(user_params)
-  end
+  
 
   def edit
   end
