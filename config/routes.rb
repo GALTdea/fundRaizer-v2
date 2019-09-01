@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
+  
   resources :campaign_pages
   resources :waitlists
 
@@ -102,7 +102,7 @@ Rails.application.routes.draw do
 
  resources :businesses
  resources :orgs
-
+ resources :users
   
 
   get 'pages/welcome'
