@@ -19,6 +19,14 @@
 
 /*/////////// WeLCOME PAGE ////////////////      */
 
+.waitlist-form{
+    color: black !important;
+    background-color: rgba(212,237,218, .8) !important;
+    border-color: rgba(212,237,218, .01) !important;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.1em;
+}
+
 .wLSignUp{
     width: 30%;
 }
@@ -28,8 +36,12 @@
     color: #fff !important;
     background-color: #007bff !important;
     border-color: #007bff !important;
-    font-size: .6em !important
+    font-size: 1.3em !important
 }
+.btn-outline-primary{
+    font-size: 1.28em !important
+}
+
 
 /* Welcome Header */
 .header-msg0{

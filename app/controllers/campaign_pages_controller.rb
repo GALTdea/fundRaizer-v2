@@ -13,7 +13,6 @@ class CampaignPagesController < ApplicationController
   end
 
   def create
-    binding.pry
   	@campaign_page = CampaignPage.create(campaign_page_params)
     @campaign_page.user_id = current_user.id
     if @campaign_page.save
