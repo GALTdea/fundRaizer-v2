@@ -17,18 +17,20 @@
         </div>
         <% if business_signed_in? or org_signed_in? %>
         <% else %>
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <%#= link_to "Start a Campaign", new_org_registration_path, 'data-toggle':'modal', '#exampleModal': "#popupnum" , class:"btn btn-lg btn-primary btn-grenish" %>
-              <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-primary btn-grenish "> Start a Campaign</button>
-            </div>
-          </div> 
+          <!-- toggle btn  -->
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <%#= link_to "Start a Campaign", new_org_registration_path, 'data-toggle':'modal', '#exampleModal': "#popupnum" , class:"btn btn-lg btn-primary btn-grenish" %>
+                <button data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-primary btn-grenish"> Start a Campaign</button>
+              </div>
+            </div> 
+          <!-- toggle btn  -->
         <% end %>
       </div>
-      <div class="col-md-6">
+      <!-- <div class="col-md-6">
         <div class=".d-none .d-sm-block .d-md-none mb-3"></div>
         <img class="first-slide-pic img-fluid" src="pages/WelcomeSchool540x310v4.jpg" alt="First slide">
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
@@ -38,10 +40,9 @@
 <div class="container"> 
   <div class="card alert alert-success waitlist-form justify-content-center text-center" role="alert">
     <div class="card-body ">
-      <div class="text-center mb-2">We are currently in private beta. Sign up to request an early invitation! </div>
+      <div class="text-center mb-2"> Sign up to request an invitation! </div>
       <div class="">
         <%= form_for(Waitlist.new, :url => waitlists_path, html: {class:"form-inline", style: 'display:inline !important;'}) do |f| %>
-        
           <span>
             <%= f.email_field :email, type:"email" , class:"form-control form-control-lg  ", placeholder:"Email Address" %>
           </span>
@@ -53,11 +54,8 @@
           <span>
             <%= f.submit "Submit", class:'btn btn-outline-primary ml-2 ' %> 
           </span>
-          
-        
       <% end %>
       </div>
-      
     </div>
   </div>
 </div>
