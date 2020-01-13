@@ -1,9 +1,14 @@
 source 'https://rubygems.org'
 
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+
+gem 'dotenv-rails', groups: [:development, :test]
+
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -11,7 +16,7 @@ gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 4.3', '>= 4.3.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -39,7 +44,7 @@ gem 'jbuilder', '~> 2.5'
 
 
 # gem 'bootstrap', '~> 4.0'
-gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'bootstrap', '~> 4.4', '>= 4.4.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
@@ -67,7 +72,7 @@ gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 #facebook integration 
 
 # gem 'omniauth-facebook', '~> 5.0'
-gem 'dotenv-rails', '~> 2.7', '>= 2.7.1'
+
 
 # icons library
 # gem 'octicons', '~> 3.0', '>= 3.0.1'
@@ -78,8 +83,8 @@ gem 'pundit', '~> 2.0', '>= 2.0.1'
 
 gem 'social-share-button', '~> 1.2'
 
-
-
+# per github warning instruction
+# gem 'excon', '~> 0.71.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -103,4 +108,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-ruby '2.5.0'
+# ruby '2.5.0'

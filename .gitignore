@@ -20,6 +20,5 @@
 
 
 
-# must ingnore secret file
-# /config/secrets.yml
+
 .env
