@@ -50,7 +50,7 @@ gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'tether-rails', '~> 1.4'
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 # image loader and rezisors
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'carrierwave-aws', '~> 1.3'
