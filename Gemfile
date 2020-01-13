@@ -57,7 +57,7 @@ gem 'carrierwave-aws', '~> 1.3'
 gem 'fog-aws', '~> 3.3'
 
 # gem 'rmagick', '~> 2.16'
-gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+gem 'mini_magick', '~> 4.9'
 
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
