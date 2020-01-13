@@ -50,14 +50,15 @@ gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'tether-rails', '~> 1.4'
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7', '>= 4.7.1'
 # image loader and rezisors
 gem 'carrierwave', '~> 1.2', '>= 1.2.2'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'fog-aws', '~> 3.3'
 
 # gem 'rmagick', '~> 2.16'
-gem 'mini_magick', '~> 4.5', '>= 4.5.1'
+
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 
 
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
@@ -83,8 +84,15 @@ gem 'pundit', '~> 2.0', '>= 2.0.1'
 
 gem 'social-share-button', '~> 1.2'
 
+
+
+
+
 # per github warning instruction
 # gem 'excon', '~> 0.71.1'
+
+# gem 'nokogiri', '~> 1.10', '>= 1.10.7'
+# gem 'loofah', '~> 2.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
