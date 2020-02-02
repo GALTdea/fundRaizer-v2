@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def welcome
   	@event_pages = EventPage.all
+  	
   end
 
   def about
