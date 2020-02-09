@@ -19,6 +19,7 @@
 
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    
+
     <%= favicon_link_tag asset_path('fr_icon_2.png') %>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300&display=swap" rel="stylesheet">
@@ -38,7 +39,15 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body class="main-body">
+      <%# if current_business.events.last.new_record? %>
+      <% if current_business.events.last.business_active == false %>
+        <div class="alert alert-danger" role="alert">
+          <%= link_to "Your Have a New Event Proposal!", business_events_path(current_business) %>
+        </div>
+      <% end %>
            <%= alerts %>
+          <%= render "shared/event_warning" %>
+
           <% unless controller_name == "event_pages" && action_name == "show" %>
             <% if business_signed_in? %>
               <%=  render "shared/bus_navbar" %>
@@ -57,3 +66,5 @@
         <%= render "shared/waitlist2" %>
   </body>
 </html>
+
+
