@@ -39,19 +39,20 @@
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body class="main-body">
-      <% if current_business.events.any? %>
-        <% if current_business.events.last.business_active == false %>
-          <div class="alert alert-danger" role="alert">
-            <%= link_to "Your Have a New Event Proposal!", business_events_path(current_business) %>
-          </div>
-        <% end %>
-      <% end -%>
+      
            <%= alerts %>
-          <%= render "shared/event_warning" %>
+         
 
           <% unless controller_name == "event_pages" && action_name == "show" %>
             <% if business_signed_in? %>
               <%=  render "shared/bus_navbar" %>
+              <% if current_business.events.any? %>
+                <% if current_business.events.last.business_active == false %>
+                  <div class="alert alert-danger" role="alert">
+                    <%= link_to "Your Have a New Event Proposal!", business_events_path(current_business) %>
+                  </div>
+                <% end %>
+              <% end -%>
             <% elsif org_signed_in? %>
               <%=  render "shared/org_navbar" %>
             <% elsif user_signed_in?  %>
