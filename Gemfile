@@ -68,8 +68,7 @@ gem 'gritter', '~> 1.2'
 gem 'administrate', '~> 0.10.0' 
 # gem 'administrate', '~> 0.11.0'
 
-gem 'friendly_id', '~> 5.2', '>= 5.2.4'
-
+gem 'friendly_id', '~> 5.3'
 #facebook integration 
 
 # gem 'omniauth-facebook', '~> 5.0'

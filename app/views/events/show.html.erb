@@ -1,19 +1,26 @@
 <div class="container">
-<h1>Event:</h1>
-Event Name: <%= @event.name %>
-<br>
-Bus Name: <%= @event.business.name %>
-<br>
-Org Name: <%= @event.org.name %>
-<br>
 
-	<% if @event.business_active == false  %>
-		<p>Active: Inactive</p>
-	<% else %>
-		<p>Active: True </p>
-	<% end %>
-	
-<br>
+<h1>Event:</h1>
+
+<% if @event.present? %>
+	Event Name: <%= @event.event_name %>
+	<br>
+	Bus Name: <%= @event.business.name %>
+	<br>
+	Org Name: <%= @event.org.name %>
+	<br>
+
+		<% if @event.business_active == false  %>
+			<p>Active: Inactive</p>
+		<% else %>
+			<p>Active: True </p>
+		<% end %>
+		
+    <br>
+  <% else %>
+	<p>Event Name: Event waiting to be named</p>
+<% end %>
+
 <%#= link_to "Event Page", event_page_path(@event) %>
 <br>
 
@@ -22,12 +29,12 @@ Org Name: <%= @event.org.name %>
 
 
 <%#= link_to f.name, event_path(f) %>  <%#= link_to "page", event_page_path(f.event_page) %> <br>
-<% if business_signed_in? %>
-		<% if @event.business_active == false %>
-			<p>Event not active: <%= link_to "Accept Event", confirmation_event_path(@event ,event: { business_active: true } ), method: :put %></p>
+<%# if business_signed_in? %>
+		<%# if @event.business_active == false %>
+			<p>Event not active: <%#= link_to "Accept Event", confirmation_event_path(@event ,event: { business_active: true } ), method: :put %></p>
 			
-		<% else %>
-		<p>Event Active: <%= link_to "Cancell Event", confirmation_event_path(@event, event: { active: false } ), method: :put %></p>
+		<%# else %>
+		<p>Event Active: <%#= link_to "Cancell Event", confirmation_event_path(@event, event: { active: false } ), method: :put %></p>
 		  
-		<%end %>
-<% end %>
+		<%#end %>
+<%# end %>
