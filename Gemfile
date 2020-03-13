@@ -65,7 +65,7 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 gem 'gritter', '~> 1.2'
 
-gem 'administrate', '~> 0.10.0' 
+gem 'administrate', '~> 0.13.0' 
 # gem 'administrate', '~> 0.11.0'
 
 gem 'friendly_id', '~> 5.3'
