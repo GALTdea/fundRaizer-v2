@@ -52,7 +52,7 @@ gem 'tether-rails', '~> 1.4'
 
 gem 'devise', '~> 4.7', '>= 4.7.1'
 # image loader and rezisors
-gem 'carrierwave', '~> 1.2', '>= 1.2.2'
+gem 'carrierwave', '~> 1.3'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'fog-aws', '~> 3.3'
 
